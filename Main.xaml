@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="757,3010" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:uaaa="clr-namespace:UiPath.Adobe.AdobeSign.Activities;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:uaacu="clr-namespace:UiPath.Adobe.AdobeSign.Clients.Users;assembly=UiPath.Adobe.AdobeSign" xmlns:uaam="clr-namespace:UiPath.Adobe.AdobeSign.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:uaas="clr-namespace:UiPath.Adobe.AdobeSign.Services;assembly=UiPath.Adobe.AdobeSign" xmlns:uaia="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Activities;assembly=UiPath.AdobePdfServices.IntegrationService.Activities" xmlns:uaic="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Client;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubme1="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.Adobe.AdobeSign" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubt1="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.Adobe.AdobeSign" xmlns:ucm="clr-namespace:UiPath.CodeGen.Model;assembly=UiPath.Adobe.AdobeSign" xmlns:ucmc="clr-namespace:UiPath.CodeGen.Models.Connection;assembly=UiPath.Adobe.AdobeSign" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uim="clr-namespace:UiPath.IntegrationCore.Models;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:uis="clr-namespace:UiPath.IntegrationCore.Services;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="539.5,3248" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:uaaa="clr-namespace:UiPath.Adobe.AdobeSign.Activities;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:uaaca="clr-namespace:UiPath.Adobe.AdobeSign.Clients.Agreements;assembly=UiPath.Adobe.AdobeSign" xmlns:uaam="clr-namespace:UiPath.Adobe.AdobeSign.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:uaas="clr-namespace:UiPath.Adobe.AdobeSign.Services;assembly=UiPath.Adobe.AdobeSign" xmlns:uaia="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Activities;assembly=UiPath.AdobePdfServices.IntegrationService.Activities" xmlns:uaic="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Client;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubme1="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.Adobe.AdobeSign" xmlns:ubmr="clr-namespace:UiPath.BAF.Models.Response;assembly=UiPath.Adobe.AdobeSign" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubt1="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.Adobe.AdobeSign" xmlns:ucm="clr-namespace:UiPath.CodeGen.Model;assembly=UiPath.Adobe.AdobeSign" xmlns:ucmc="clr-namespace:UiPath.CodeGen.Models.Connection;assembly=UiPath.Adobe.AdobeSign" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uim="clr-namespace:UiPath.IntegrationCore.Models;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:uis="clr-namespace:UiPath.IntegrationCore.Services;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="49">
+    <scg:List x:TypeArguments="x:String" Capacity="57">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -50,10 +50,18 @@
       <x:String>UiPath.BAF.Models.CrudOperation</x:String>
       <x:String>UiPath.BAF.Models.Response</x:String>
       <x:String>UiPath.AdobePdfServices.IntegrationService.Client</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Adobe.AdobeSign.Clients.Agreements</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -77,9 +85,19 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="476,2945" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="549.5,3183" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="clientId" />
       <Variable x:TypeArguments="ss:SecureString" Name="clientSecret" />
@@ -89,24 +107,44 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uaia:Scope Connection="{x:Null}" ConnectionId="{x:Null}" ExistingConnection="{x:Null}" Connector="uipath-adobe-pdfservices" DesignConnectionEnabled="True" DisplayName="Adobe PDF Services Scope" sap:VirtualizedContainerService.HintSize="434,2235" sap2010:WorkflowViewState.IdRef="Scope_1" TelemetryEnabled="False" ThrowExceptionOnError="True" UseConnectionService="True">
+    <uaia:Scope Connection="{x:Null}" ConnectionId="{x:Null}" ExistingConnection="{x:Null}" Connector="uipath-adobe-pdfservices" DesignConnectionEnabled="True" DisplayName="Adobe PDF Services Scope" sap:VirtualizedContainerService.HintSize="507.5,2261" sap2010:WorkflowViewState.IdRef="Scope_1" TelemetryEnabled="False" ThrowExceptionOnError="True" UseConnectionService="True">
       <uaia:Scope.Body>
         <ActivityAction x:TypeArguments="uaia:AdobePdfServicesScopeActivityContext">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="uaia:AdobePdfServicesScopeActivityContext" Name="ScopeActivityContext" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="376,2124" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="473.5,2150" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location" Name="input_file_loc" />
               <Variable x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format" Name="input_doc_format" />
-              <Variable x:TypeArguments="x:Object" Name="json_input" />
+              <Variable x:TypeArguments="njl:JObject" Name="json_input" />
+              <Variable x:TypeArguments="uaic:CreateDocumentGenerationRequest" Name="req" />
+              <Variable x:TypeArguments="x:String" Name="documentId" />
+              <Variable x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format" Name="out_doc_format" />
+              <Variable x:TypeArguments="uaic:DocumentGenerationStatus" Name="docu_status" />
+              <Variable x:TypeArguments="x:String" Name="json_body" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uaia:CreateDocument BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" FilePath="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="documentGeneration" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Create Document" sap:VirtualizedContainerService.HintSize="334,648" sap2010:WorkflowViewState.IdRef="CreateDocument_1" UseConnectionService="True">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.5,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[json_body]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[System.io.file.ReadAllText("Data\input.json", System.Text.Encoding.UTF8)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="431.5,59" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[json_input]" JsonString="[json_body]" />
+            <uaia:CreateDocument BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="documentGeneration" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Create Document" FilePath="Data\정보보호서약서.docx" sap:VirtualizedContainerService.HintSize="431.5,648" sap2010:WorkflowViewState.IdRef="CreateDocument_1" UseConnectionService="True">
               <uaia:CreateDocument.BusinessEntity>
                 <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="documentGeneration">
                   <ubme:BusinessEntity.AllFields>
@@ -114,14 +152,38 @@
                       <uim:OperationEntityField x:TypeArguments="uaic:ContentAnalyzerRequests3" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:ContentAnalyzerRequests3" DataType="ContentAnalyzerRequests3" Description="" DisplayName="ContentAnalyzerRequests" FieldName="contentAnalyzerRequests" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
                       <uim:OperationEntityField x:TypeArguments="uaic:FileParameter" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:FileParameter" DataType="FileParameter" Description="" DisplayName="InputFile" FieldName="inputFile" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
                       <uim:OperationEntityField x:TypeArguments="uaic:CreateDocumentGenerationResponse" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="uaic:CreateDocumentGenerationResponse" DataType="CreateDocumentGenerationResponse" Description="OK - Everything worked as expected" DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                      <x:Reference>__ReferenceID1</x:Reference>
-                      <x:Reference>__ReferenceID2</x:Reference>
-                      <x:Reference>__ReferenceID3</x:Reference>
-                      <x:Reference>__ReferenceID4</x:Reference>
-                      <x:Reference>__ReferenceID5</x:Reference>
-                      <x:Reference>__ReferenceID6</x:Reference>
-                      <x:Reference>__ReferenceID7</x:Reference>
-                      <x:Reference>__ReferenceID8</x:Reference>
+                      <uim:OperationEntityField x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location" DataType="CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location" Description="The location containing the input file in the multipart/form-data request, valid enum is InputFile." DisplayName="Input File Location" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.cpf_location" FormDataType="ExpressionTextBox" InArgumentValue="[CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location.InputFile]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                        <uim:OperationEntityField.ArgumentValue>
+                          <InArgument x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location">[CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location.InputFile]</InArgument>
+                        </uim:OperationEntityField.ArgumentValue>
+                      </uim:OperationEntityField>
+                      <uim:OperationEntityField x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format" DataType="CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format" Description="The format of the file taken as input, valid enum is application/vnd.openxmlformats-officedocument.wordprocessingml.document." DisplayName="Input Document Format" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.dc_format" FormDataType="ExpressionTextBox" InArgumentValue="[CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format.Application_vnd_openxmlformatsOfficedocument_wordprocessingml_document]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                        <uim:OperationEntityField.ArgumentValue>
+                          <InArgument x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format">[CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format.Application_vnd_openxmlformatsOfficedocument_wordprocessingml_document]</InArgument>
+                        </uim:OperationEntityField.ArgumentValue>
+                      </uim:OperationEntityField>
+                      <uim:OperationEntityField x:TypeArguments="s:Nullable(uaic:CreateDocumentGenerationRequestCpf_inputsParamsCpf_inlineOutputFormat)" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="s:Nullable(uaic:CreateDocumentGenerationRequestCpf_inputsParamsCpf_inlineOutputFormat)" DataType="CreateDocumentGenerationRequestCpf_inputsParamsCpf_inlineOutputFormat" Description="Specifies the target format of the generated output document,valid enums are docx, pdf." DisplayName="Document Format" FieldName="contentAnalyzerRequests.cpf_inputs.params.cpf_inline.outputFormat" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
+                      <uim:OperationEntityField x:TypeArguments="x:Object" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:Object" DataType="Object" Description="jsondatamerge" DisplayName="jsondatamerge" FieldName="contentAnalyzerRequests.cpf_inputs.params.cpf_inline.jsonDataForMerge" FormDataType="ExpressionTextBox" InArgumentValue="[json_input]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                        <uim:OperationEntityField.ArgumentValue>
+                          <InArgument x:TypeArguments="x:Object">[json_input]</InArgument>
+                        </uim:OperationEntityField.ArgumentValue>
+                      </uim:OperationEntityField>
+                      <uim:OperationEntityField x:TypeArguments="x:Object" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="x:Object" DataType="Object" Description="Specifies the Fragments JSON object or a JSON array to resolve fragments in the document template." DisplayName="fragments" FieldName="contentAnalyzerRequests.cpf_inputs.params.cpf_inline.fragments" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
+                      <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the created file." DisplayName="Created File Name" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.cpf_location" FormDataType="ExpressionTextBox" InArgumentValue="Data\정보보호서약서.pdf" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                        <uim:OperationEntityField.ArgumentValue>
+                          <InArgument x:TypeArguments="x:String">Data\정보보호서약서.pdf</InArgument>
+                        </uim:OperationEntityField.ArgumentValue>
+                      </uim:OperationEntityField>
+                      <uim:OperationEntityField x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="uaic:CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format" DataType="CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format" Description="The expected format of output document, valid enums are application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document" DisplayName="Output Document Format" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.dc_format" FormDataType="ExpressionTextBox" InArgumentValue="[CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format.Application_pdf]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                        <uim:OperationEntityField.ArgumentValue>
+                          <InArgument x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format">[CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format.Application_pdf]</InArgument>
+                        </uim:OperationEntityField.ArgumentValue>
+                      </uim:OperationEntityField>
+                      <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID8" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The ID of the new document generated." DisplayName="Document Id" FieldName="Response.id" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" OutArgumentValue="[documentId]" ShouldFilterOnChange="False">
+                        <uim:OperationEntityField.ArgumentValue>
+                          <OutArgument x:TypeArguments="x:String">[documentId]</OutArgument>
+                        </uim:OperationEntityField.ArgumentValue>
+                      </uim:OperationEntityField>
                     </scg:List>
                   </ubme:BusinessEntity.AllFields>
                   <ubme:BusinessEntity.EntityMetadata>
@@ -165,26 +227,14 @@
               </uaia:CreateDocument.DesignConnectionRequest>
               <uaia:CreateDocument.SelectedFields>
                 <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location" DataType="CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location" Description="The location containing the input file in the multipart/form-data request, valid enum is InputFile." DisplayName="Input File Location" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.cpf_location" FormDataType="ExpressionTextBox" InArgumentValue="[input_file_loc.]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
-                    <uim:OperationEntityField.ArgumentValue>
-                      <InArgument x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInCpf_location">[input_file_loc.]</InArgument>
-                    </uim:OperationEntityField.ArgumentValue>
-                  </uim:OperationEntityField>
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format" DataType="CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format" Description="The format of the file taken as input, valid enum is application/vnd.openxmlformats-officedocument.wordprocessingml.document." DisplayName="Input Document Format" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.dc_format" FormDataType="ExpressionTextBox" InArgumentValue="[input_doc_format.]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
-                    <uim:OperationEntityField.ArgumentValue>
-                      <InArgument x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_inputsDocumentInDc_format">[input_doc_format.]</InArgument>
-                    </uim:OperationEntityField.ArgumentValue>
-                  </uim:OperationEntityField>
-                  <uim:OperationEntityField x:TypeArguments="s:Nullable(uaic:CreateDocumentGenerationRequestCpf_inputsParamsCpf_inlineOutputFormat)" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="s:Nullable(uaic:CreateDocumentGenerationRequestCpf_inputsParamsCpf_inlineOutputFormat)" DataType="CreateDocumentGenerationRequestCpf_inputsParamsCpf_inlineOutputFormat" Description="Specifies the target format of the generated output document,valid enums are docx, pdf." DisplayName="Document Format" FieldName="contentAnalyzerRequests.cpf_inputs.params.cpf_inline.outputFormat" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="x:Object" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:Object" DataType="Object" Description="jsondatamerge" DisplayName="jsondatamerge" FieldName="contentAnalyzerRequests.cpf_inputs.params.cpf_inline.jsonDataForMerge" FormDataType="ExpressionTextBox" InArgumentValue="[json_input]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
-                    <uim:OperationEntityField.ArgumentValue>
-                      <InArgument x:TypeArguments="x:Object">[json_input]</InArgument>
-                    </uim:OperationEntityField.ArgumentValue>
-                  </uim:OperationEntityField>
-                  <uim:OperationEntityField x:TypeArguments="x:Object" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="x:Object" DataType="Object" Description="Specifies the Fragments JSON object or a JSON array to resolve fragments in the document template." DisplayName="fragments" FieldName="contentAnalyzerRequests.cpf_inputs.params.cpf_inline.fragments" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the created file." DisplayName="Created File Name" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.cpf_location" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="uaic:CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format" DataType="CreateDocumentGenerationRequestCpf_outputsDocumentOutDc_format" Description="The expected format of output document, valid enums are application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document" DisplayName="Output Document Format" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.dc_format" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID8" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The ID of the new document generated." DisplayName="Document Id" FieldName="Response.id" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
+                  <x:Reference>__ReferenceID1</x:Reference>
+                  <x:Reference>__ReferenceID2</x:Reference>
+                  <x:Reference>__ReferenceID3</x:Reference>
+                  <x:Reference>__ReferenceID4</x:Reference>
+                  <x:Reference>__ReferenceID5</x:Reference>
+                  <x:Reference>__ReferenceID6</x:Reference>
+                  <x:Reference>__ReferenceID7</x:Reference>
+                  <x:Reference>__ReferenceID8</x:Reference>
                 </scg:List>
               </uaia:CreateDocument.SelectedFields>
               <uaia:CreateDocument.ServiceFactory>
@@ -213,147 +263,160 @@
                 <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
               </uaia:CreateDocument.TelemetryProperties>
             </uaia:CreateDocument>
-            <uaia:compressPdf BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" FilePath="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="compressPdf" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="PDF Compress" sap:VirtualizedContainerService.HintSize="334,512" sap2010:WorkflowViewState.IdRef="compressPdf_1" UseConnectionService="True">
-              <uaia:compressPdf.BusinessEntity>
-                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID10}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="compressPdf">
-                  <ubme:BusinessEntity.AllFields>
-                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="16">
-                      <uim:OperationEntityField x:TypeArguments="uaic:ContentAnalyzerRequests4" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:ContentAnalyzerRequests4" DataType="ContentAnalyzerRequests4" Description="" DisplayName="ContentAnalyzerRequests" FieldName="contentAnalyzerRequests" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                      <uim:OperationEntityField x:TypeArguments="uaic:FileParameter" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:FileParameter" DataType="FileParameter" Description="" DisplayName="InputFile" FieldName="inputFile" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                      <uim:OperationEntityField x:TypeArguments="uaic:CreateCompressPdfResponse" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="uaic:CreateCompressPdfResponse" DataType="CreateCompressPdfResponse" Description="OK - Everything worked as expected" DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                      <x:Reference>__ReferenceID11</x:Reference>
-                      <x:Reference>__ReferenceID12</x:Reference>
-                      <x:Reference>__ReferenceID13</x:Reference>
-                      <x:Reference>__ReferenceID14</x:Reference>
-                      <x:Reference>__ReferenceID15</x:Reference>
-                      <x:Reference>__ReferenceID16</x:Reference>
-                    </scg:List>
-                  </ubme:BusinessEntity.AllFields>
-                  <ubme:BusinessEntity.EntityMetadata>
-                    <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Section="{x:Null}" DisplayName="Compress Pdf" EligibleOperations="32" IsCustomEntity="False" Name="compressPdf">
-                      <ubme:EntityMetadata.Metadata>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
-                          <x:String x:Key="Object">compressPdf</x:String>
-                          <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.CompressPdfAPIClient</x:String>
-                          <x:String x:Key="Operation">CreateCompressPdf</x:String>
-                          <x:String x:Key="Path">/compressPdf</x:String>
-                        </scg:Dictionary>
-                      </ubme:EntityMetadata.Metadata>
-                    </ubme:EntityMetadata>
-                  </ubme:BusinessEntity.EntityMetadata>
-                  <ubme:BusinessEntity.SelectedFields>
-                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
-                      <x:Reference>__ReferenceID11</x:Reference>
-                      <x:Reference>__ReferenceID12</x:Reference>
-                      <x:Reference>__ReferenceID13</x:Reference>
-                      <x:Reference>__ReferenceID14</x:Reference>
-                      <x:Reference>__ReferenceID15</x:Reference>
-                      <x:Reference>__ReferenceID16</x:Reference>
-                    </scg:List>
-                  </ubme:BusinessEntity.SelectedFields>
-                  <ubme:BusinessEntity.TelemetryProperties>
-                    <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                  </ubme:BusinessEntity.TelemetryProperties>
-                </ubme:BusinessEntity>
-              </uaia:compressPdf.BusinessEntity>
-              <uaia:compressPdf.ClientInfo>
-                <uim:ClientInfo x:Name="__ReferenceID17" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
-              </uaia:compressPdf.ClientInfo>
-              <uaia:compressPdf.DesignConnectionRequest>
-                <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID17}" ConnectionId="{x:Null}" ConnectionName="{x:Null}" TelemetryClient="{x:Null}" AuthType="ElementInstance">
-                  <uim:ConnectionParams.TelemetryInfo>
-                    <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
-                  </uim:ConnectionParams.TelemetryInfo>
-                </uim:ConnectionParams>
-              </uaia:compressPdf.DesignConnectionRequest>
-              <uaia:compressPdf.SelectedFields>
-                <scg:List x:TypeArguments="ubme:EntityField" Capacity="6">
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateCompressPdfRequestCpf_inputsDocumentInCpf_location" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="uaic:CreateCompressPdfRequestCpf_inputsDocumentInCpf_location" DataType="CreateCompressPdfRequestCpf_inputsDocumentInCpf_location" Description="The location containing the input file in the multipart/form-data request,valid enum is InputFile." DisplayName="Input File Location" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.cpf_location" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateCompressPdfRequestCpf_inputsDocumentInDc_format" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID12" ArgumentDirection="In" ArgumentType="uaic:CreateCompressPdfRequestCpf_inputsDocumentInDc_format" DataType="CreateCompressPdfRequestCpf_inputsDocumentInDc_format" Description="The format of the file taken as input, valid enum is application/pdf." DisplayName="Input Document Format" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.dc_format" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="s:Nullable(uaic:CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel)" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID13" ArgumentDirection="In" ArgumentType="s:Nullable(uaic:CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel)" DataType="CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel" Description="Specifies the level of compression to reduce the file size of the pdf, valid enums are HIGH, MEDIUM, LOW." DisplayName="Compression Level" FieldName="contentAnalyzerRequests.cpf_inputs.params.cpf_inline.compressionLevel" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID14" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the created file." DisplayName="Created File Name" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.cpf_location" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateCompressPdfRequestCpf_outputsDocumentOutDc_format" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID15" ArgumentDirection="In" ArgumentType="uaic:CreateCompressPdfRequestCpf_outputsDocumentOutDc_format" DataType="CreateCompressPdfRequestCpf_outputsDocumentOutDc_format" Description="The expected format of output document, valid enum is application/pdf ." DisplayName="Output Document Format" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.dc_format" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID16" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The ID of the new document generated." DisplayName="Document Id" FieldName="Response.id" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                </scg:List>
-              </uaia:compressPdf.SelectedFields>
-              <uaia:compressPdf.ServiceFactory>
-                <uis:ServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}">
-                  <uis:ServiceFactory.BusinessEntityExecuteService>
-                    <uis:BusinessEntityExecuteService />
-                  </uis:ServiceFactory.BusinessEntityExecuteService>
-                  <uis:ServiceFactory.ConnectionService>
-                    <uis:ConnectionService />
-                  </uis:ServiceFactory.ConnectionService>
-                  <uis:ServiceFactory.FileService>
-                    <uis:FileExecutionService />
-                  </uis:ServiceFactory.FileService>
-                  <uis:ServiceFactory.ListService>
-                    <uis:ListService />
-                  </uis:ServiceFactory.ListService>
-                  <uis:ServiceFactory.MetadataService>
-                    <uis:MetadataService />
-                  </uis:ServiceFactory.MetadataService>
-                  <uis:ServiceFactory.SampleDataService>
-                    <uis:SampleDataService />
-                  </uis:ServiceFactory.SampleDataService>
-                </uis:ServiceFactory>
-              </uaia:compressPdf.ServiceFactory>
-              <uaia:compressPdf.TelemetryProperties>
-                <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-              </uaia:compressPdf.TelemetryProperties>
-            </uaia:compressPdf>
-            <uaia:pageManipulation BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" FilePath="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="pageManipulation" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Page Manipulation" sap:VirtualizedContainerService.HintSize="334,308" sap2010:WorkflowViewState.IdRef="pageManipulation_1" UseConnectionService="True">
-              <uaia:pageManipulation.BusinessEntity>
-                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID18}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="pageManipulation">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431.5,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;docu_id &quot;  + documentId]" />
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not docu_status.Cpf_status.Completed.Value]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="431.5,718" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="10">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,551" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uaia:GetDocumentGenerationStatus BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="documentGenerationStatus" Connector="uipath-adobe-pdfservices" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Document Generation Status" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="GetDocumentGenerationStatus_1" UseConnectionService="True">
+                    <uaia:GetDocumentGenerationStatus.BusinessEntity>
+                      <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID10}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="documentGenerationStatus">
+                        <ubme:BusinessEntity.AllFields>
+                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                            <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The Document Generation Id" DisplayName="Id" FieldName="documentGenerationStatusId" FormDataType="ExpressionTextBox" InArgumentValue="[documentId]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="True" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                              <uim:OperationEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:String">[documentId]</InArgument>
+                              </uim:OperationEntityField.ArgumentValue>
+                            </uim:OperationEntityField>
+                            <uim:OperationEntityField x:TypeArguments="uaic:DocumentGenerationStatus" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID12" ArgumentDirection="Out" ArgumentType="uaic:DocumentGenerationStatus" DataType="DocumentGenerationStatus" Description="The Status of Document Generated." DisplayName="Document Generation Status" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" OutArgumentValue="[docu_status]" ShouldFilterOnChange="False">
+                              <uim:OperationEntityField.ArgumentValue>
+                                <OutArgument x:TypeArguments="uaic:DocumentGenerationStatus">[docu_status]</OutArgument>
+                              </uim:OperationEntityField.ArgumentValue>
+                            </uim:OperationEntityField>
+                          </scg:List>
+                        </ubme:BusinessEntity.AllFields>
+                        <ubme:BusinessEntity.EntityMetadata>
+                          <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Section="{x:Null}" DisplayName="Document Generation Status" EligibleOperations="2" IsCustomEntity="False" Name="documentGenerationStatus">
+                            <ubme:EntityMetadata.Metadata>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
+                                <x:String x:Key="Object">documentGenerationStatus</x:String>
+                                <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DocumentGenerationStatusAPIClient</x:String>
+                                <x:String x:Key="Operation">GetDocumentGenerationStatuByDocumentGenerationStatusId</x:String>
+                                <x:String x:Key="Path">/documentGenerationStatus/{documentGenerationStatusId}</x:String>
+                              </scg:Dictionary>
+                            </ubme:EntityMetadata.Metadata>
+                          </ubme:EntityMetadata>
+                        </ubme:BusinessEntity.EntityMetadata>
+                        <ubme:BusinessEntity.SelectedFields>
+                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                            <x:Reference>__ReferenceID11</x:Reference>
+                            <x:Reference>__ReferenceID12</x:Reference>
+                          </scg:List>
+                        </ubme:BusinessEntity.SelectedFields>
+                        <ubme:BusinessEntity.TelemetryProperties>
+                          <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                        </ubme:BusinessEntity.TelemetryProperties>
+                      </ubme:BusinessEntity>
+                    </uaia:GetDocumentGenerationStatus.BusinessEntity>
+                    <uaia:GetDocumentGenerationStatus.ClientInfo>
+                      <uim:ClientInfo x:Name="__ReferenceID13" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
+                    </uaia:GetDocumentGenerationStatus.ClientInfo>
+                    <uaia:GetDocumentGenerationStatus.DesignConnectionRequest>
+                      <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID13}" ConnectionId="{x:Null}" ConnectionName="{x:Null}" TelemetryClient="{x:Null}" AuthType="ElementInstance">
+                        <uim:ConnectionParams.TelemetryInfo>
+                          <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
+                        </uim:ConnectionParams.TelemetryInfo>
+                      </uim:ConnectionParams>
+                    </uaia:GetDocumentGenerationStatus.DesignConnectionRequest>
+                    <uaia:GetDocumentGenerationStatus.SelectedFields>
+                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
+                        <x:Reference>__ReferenceID11</x:Reference>
+                        <x:Reference>__ReferenceID12</x:Reference>
+                      </scg:List>
+                    </uaia:GetDocumentGenerationStatus.SelectedFields>
+                    <uaia:GetDocumentGenerationStatus.ServiceFactory>
+                      <uis:ServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}">
+                        <uis:ServiceFactory.BusinessEntityExecuteService>
+                          <uis:BusinessEntityExecuteService />
+                        </uis:ServiceFactory.BusinessEntityExecuteService>
+                        <uis:ServiceFactory.ConnectionService>
+                          <uis:ConnectionService />
+                        </uis:ServiceFactory.ConnectionService>
+                        <uis:ServiceFactory.FileService>
+                          <uis:FileExecutionService />
+                        </uis:ServiceFactory.FileService>
+                        <uis:ServiceFactory.ListService>
+                          <uis:ListService />
+                        </uis:ServiceFactory.ListService>
+                        <uis:ServiceFactory.MetadataService>
+                          <uis:MetadataService />
+                        </uis:ServiceFactory.MetadataService>
+                        <uis:ServiceFactory.SampleDataService>
+                          <uis:SampleDataService />
+                        </uis:ServiceFactory.SampleDataService>
+                      </uis:ServiceFactory>
+                    </uaia:GetDocumentGenerationStatus.ServiceFactory>
+                    <uaia:GetDocumentGenerationStatus.TelemetryProperties>
+                      <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                    </uaia:GetDocumentGenerationStatus.TelemetryProperties>
+                  </uaia:GetDocumentGenerationStatus>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[string.Format(&quot;status : {0},  completed: {1}&quot;, docu_status.Cpf_status.Status, docu_status.Cpf_status.Completed)]" />
+                  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay DisplayName=" Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  </Sequence>
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+            </ui:InterruptibleDoWhile>
+            <uaia:DownloadGeneratedDocument BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="downloadGeneratedDocument" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Download Generated Document" FileName="정보보호서약서.pdf" FolderPath="[&quot;Data&quot;]" sap:VirtualizedContainerService.HintSize="431.5,240" sap2010:WorkflowViewState.IdRef="DownloadGeneratedDocument_1" UseConnectionService="True">
+              <uaia:DownloadGeneratedDocument.BusinessEntity>
+                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID14}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="downloadGeneratedDocument">
                   <ubme:BusinessEntity.AllFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
-                      <x:Reference>__ReferenceID19</x:Reference>
-                      <x:Reference>__ReferenceID20</x:Reference>
-                      <x:Reference>__ReferenceID21</x:Reference>
+                      <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID15" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The Document Generated Id" DisplayName="Document Id" FieldName="id" FormDataType="ExpressionTextBox" InArgumentValue="[documentId]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                        <uim:OperationEntityField.ArgumentValue>
+                          <InArgument x:TypeArguments="x:String">[documentId]</InArgument>
+                        </uim:OperationEntityField.ArgumentValue>
+                      </uim:OperationEntityField>
+                      <uim:OperationEntityField x:TypeArguments="uaic:FileResponse" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="uaic:FileResponse" DataType="FileResponse" Description="OK - Everything worked as expected" DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
                     </scg:List>
                   </ubme:BusinessEntity.AllFields>
                   <ubme:BusinessEntity.EntityMetadata>
-                    <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Section="{x:Null}" DisplayName="Page Manipulation" EligibleOperations="32" IsCustomEntity="False" Name="pageManipulation">
+                    <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Section="{x:Null}" DisplayName="Download Generated Document" EligibleOperations="32" IsCustomEntity="False" Name="downloadGeneratedDocument">
                       <ubme:EntityMetadata.Metadata>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID18">
-                          <x:String x:Key="Object">pageManipulation</x:String>
-                          <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.PageManipulationAPIClient</x:String>
-                          <x:String x:Key="Operation">CreatePageManipulation</x:String>
-                          <x:String x:Key="Path">/pageManipulation</x:String>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID14">
+                          <x:String x:Key="Object">downloadGeneratedDocument</x:String>
+                          <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DownloadGeneratedDocumentAPIClient</x:String>
+                          <x:String x:Key="Operation">GetDownloadGeneratedDocument</x:String>
+                          <x:String x:Key="Path">/downloadGeneratedDocument</x:String>
                         </scg:Dictionary>
                       </ubme:EntityMetadata.Metadata>
                     </ubme:EntityMetadata>
                   </ubme:BusinessEntity.EntityMetadata>
                   <ubme:BusinessEntity.SelectedFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
-                      <x:Reference>__ReferenceID19</x:Reference>
-                      <x:Reference>__ReferenceID20</x:Reference>
-                      <x:Reference>__ReferenceID21</x:Reference>
+                      <x:Reference>__ReferenceID15</x:Reference>
                     </scg:List>
                   </ubme:BusinessEntity.SelectedFields>
                   <ubme:BusinessEntity.TelemetryProperties>
                     <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
                   </ubme:BusinessEntity.TelemetryProperties>
                 </ubme:BusinessEntity>
-              </uaia:pageManipulation.BusinessEntity>
-              <uaia:pageManipulation.ClientInfo>
-                <uim:ClientInfo x:Name="__ReferenceID22" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
-              </uaia:pageManipulation.ClientInfo>
-              <uaia:pageManipulation.DesignConnectionRequest>
-                <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID22}" ConnectionId="{x:Null}" ConnectionName="{x:Null}" TelemetryClient="{x:Null}" AuthType="ElementInstance">
+              </uaia:DownloadGeneratedDocument.BusinessEntity>
+              <uaia:DownloadGeneratedDocument.ClientInfo>
+                <uim:ClientInfo x:Name="__ReferenceID16" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
+              </uaia:DownloadGeneratedDocument.ClientInfo>
+              <uaia:DownloadGeneratedDocument.DesignConnectionRequest>
+                <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID16}" ConnectionId="{x:Null}" ConnectionName="{x:Null}" TelemetryClient="{x:Null}" AuthType="ElementInstance">
                   <uim:ConnectionParams.TelemetryInfo>
                     <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
                   </uim:ConnectionParams.TelemetryInfo>
                 </uim:ConnectionParams>
-              </uaia:pageManipulation.DesignConnectionRequest>
-              <uaia:pageManipulation.SelectedFields>
-                <scg:List x:TypeArguments="ubme:EntityField" Capacity="3">
-                  <uim:OperationEntityField x:TypeArguments="uaic:ContentAnalyzerRequests5" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID19" ArgumentDirection="In" ArgumentType="uaic:ContentAnalyzerRequests5" DataType="ContentAnalyzerRequests5" Description="" DisplayName="ContentAnalyzerRequests" FieldName="contentAnalyzerRequests" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="uaic:FileParameter" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID20" ArgumentDirection="In" ArgumentType="uaic:FileParameter" DataType="FileParameter" Description="" DisplayName="InputFile" FieldName="inputFile" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreatePageManipulationResponse" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID21" ArgumentDirection="Out" ArgumentType="uaic:CreatePageManipulationResponse" DataType="CreatePageManipulationResponse" Description="OK - Everything worked as expected" DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
+              </uaia:DownloadGeneratedDocument.DesignConnectionRequest>
+              <uaia:DownloadGeneratedDocument.SelectedFields>
+                <scg:List x:TypeArguments="ubme:EntityField" Capacity="1">
+                  <x:Reference>__ReferenceID15</x:Reference>
                 </scg:List>
-              </uaia:pageManipulation.SelectedFields>
-              <uaia:pageManipulation.ServiceFactory>
+              </uaia:DownloadGeneratedDocument.SelectedFields>
+              <uaia:DownloadGeneratedDocument.ServiceFactory>
                 <uis:ServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}">
                   <uis:ServiceFactory.BusinessEntityExecuteService>
                     <uis:BusinessEntityExecuteService />
@@ -374,105 +437,19 @@
                     <uis:SampleDataService />
                   </uis:ServiceFactory.SampleDataService>
                 </uis:ServiceFactory>
-              </uaia:pageManipulation.ServiceFactory>
-              <uaia:pageManipulation.TelemetryProperties>
+              </uaia:DownloadGeneratedDocument.ServiceFactory>
+              <uaia:DownloadGeneratedDocument.TelemetryProperties>
                 <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-              </uaia:pageManipulation.TelemetryProperties>
-            </uaia:pageManipulation>
-            <uaia:createPdf BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" FilePath="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="createPdf" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="PDF Creation" sap:VirtualizedContainerService.HintSize="334,444" sap2010:WorkflowViewState.IdRef="createPdf_1" UseConnectionService="True">
-              <uaia:createPdf.BusinessEntity>
-                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID23}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="createPdf">
-                  <ubme:BusinessEntity.AllFields>
-                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
-                      <uim:OperationEntityField x:TypeArguments="uaic:ContentAnalyzerRequests2" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:ContentAnalyzerRequests2" DataType="ContentAnalyzerRequests2" Description="" DisplayName="ContentAnalyzerRequests" FieldName="contentAnalyzerRequests" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                      <uim:OperationEntityField x:TypeArguments="uaic:FileParameter" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:FileParameter" DataType="FileParameter" Description="" DisplayName="InputFile" FieldName="inputFile" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                      <uim:OperationEntityField x:TypeArguments="uaic:CreateCreatePdfResponse" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="uaic:CreateCreatePdfResponse" DataType="CreateCreatePdfResponse" Description="OK - Everything worked as expected" DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                      <x:Reference>__ReferenceID24</x:Reference>
-                      <x:Reference>__ReferenceID25</x:Reference>
-                      <x:Reference>__ReferenceID26</x:Reference>
-                      <x:Reference>__ReferenceID27</x:Reference>
-                      <x:Reference>__ReferenceID28</x:Reference>
-                    </scg:List>
-                  </ubme:BusinessEntity.AllFields>
-                  <ubme:BusinessEntity.EntityMetadata>
-                    <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Section="{x:Null}" DisplayName="Create Pdf" EligibleOperations="32" IsCustomEntity="False" Name="createPdf">
-                      <ubme:EntityMetadata.Metadata>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID23">
-                          <x:String x:Key="Object">createPdf</x:String>
-                          <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.CreatePdfAPIClient</x:String>
-                          <x:String x:Key="Operation">CreateCreatePdf</x:String>
-                          <x:String x:Key="Path">/createPdf</x:String>
-                        </scg:Dictionary>
-                      </ubme:EntityMetadata.Metadata>
-                    </ubme:EntityMetadata>
-                  </ubme:BusinessEntity.EntityMetadata>
-                  <ubme:BusinessEntity.SelectedFields>
-                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
-                      <x:Reference>__ReferenceID24</x:Reference>
-                      <x:Reference>__ReferenceID25</x:Reference>
-                      <x:Reference>__ReferenceID26</x:Reference>
-                      <x:Reference>__ReferenceID27</x:Reference>
-                      <x:Reference>__ReferenceID28</x:Reference>
-                    </scg:List>
-                  </ubme:BusinessEntity.SelectedFields>
-                  <ubme:BusinessEntity.TelemetryProperties>
-                    <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                  </ubme:BusinessEntity.TelemetryProperties>
-                </ubme:BusinessEntity>
-              </uaia:createPdf.BusinessEntity>
-              <uaia:createPdf.ClientInfo>
-                <uim:ClientInfo x:Name="__ReferenceID29" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
-              </uaia:createPdf.ClientInfo>
-              <uaia:createPdf.DesignConnectionRequest>
-                <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID29}" ConnectionId="{x:Null}" ConnectionName="{x:Null}" TelemetryClient="{x:Null}" AuthType="ElementInstance">
-                  <uim:ConnectionParams.TelemetryInfo>
-                    <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
-                  </uim:ConnectionParams.TelemetryInfo>
-                </uim:ConnectionParams>
-              </uaia:createPdf.DesignConnectionRequest>
-              <uaia:createPdf.SelectedFields>
-                <scg:List x:TypeArguments="ubme:EntityField" Capacity="5">
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateCreatePdfRequestCpf_inputsDocumentInCpf_location" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID24" ArgumentDirection="In" ArgumentType="uaic:CreateCreatePdfRequestCpf_inputsDocumentInCpf_location" DataType="CreateCreatePdfRequestCpf_inputsDocumentInCpf_location" Description="The location containing the input file in the multipart/form-data request, valid enum is InputFile." DisplayName="Input File Location" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.cpf_location" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateCreatePdfRequestCpf_inputsDocumentInDc_format" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID25" ArgumentDirection="In" ArgumentType="uaic:CreateCreatePdfRequestCpf_inputsDocumentInDc_format" DataType="CreateCreatePdfRequestCpf_inputsDocumentInDc_format" Description="The format of the file taken as input, valid enums are application/msword ,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.openxmlformats-officedocument.wordprocessingml.document" DisplayName="Input Document Format" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.dc_format" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID26" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the created file." DisplayName="Created File Name" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.cpf_location" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="uaic:CreateCreatePdfRequestCpf_outputsDocumentOutDc_format" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID27" ArgumentDirection="In" ArgumentType="uaic:CreateCreatePdfRequestCpf_outputsDocumentOutDc_format" DataType="CreateCreatePdfRequestCpf_outputsDocumentOutDc_format" Description="The expected format of output document, valid enum is application/pdf ." DisplayName="Output Document Format" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.dc_format" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False" />
-                  <uim:OperationEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID28" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The ID of the new document generated." DisplayName="Document Id" FieldName="Response.id" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
-                </scg:List>
-              </uaia:createPdf.SelectedFields>
-              <uaia:createPdf.ServiceFactory>
-                <uis:ServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}">
-                  <uis:ServiceFactory.BusinessEntityExecuteService>
-                    <uis:BusinessEntityExecuteService />
-                  </uis:ServiceFactory.BusinessEntityExecuteService>
-                  <uis:ServiceFactory.ConnectionService>
-                    <uis:ConnectionService />
-                  </uis:ServiceFactory.ConnectionService>
-                  <uis:ServiceFactory.FileService>
-                    <uis:FileExecutionService />
-                  </uis:ServiceFactory.FileService>
-                  <uis:ServiceFactory.ListService>
-                    <uis:ListService />
-                  </uis:ServiceFactory.ListService>
-                  <uis:ServiceFactory.MetadataService>
-                    <uis:MetadataService />
-                  </uis:ServiceFactory.MetadataService>
-                  <uis:ServiceFactory.SampleDataService>
-                    <uis:SampleDataService />
-                  </uis:ServiceFactory.SampleDataService>
-                </uis:ServiceFactory>
-              </uaia:createPdf.ServiceFactory>
-              <uaia:createPdf.TelemetryProperties>
-                <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-              </uaia:createPdf.TelemetryProperties>
-            </uaia:createPdf>
+              </uaia:DownloadGeneratedDocument.TelemetryProperties>
+            </uaia:DownloadGeneratedDocument>
           </Sequence>
         </ActivityAction>
       </uaia:Scope.Body>
       <uaia:Scope.ClientInfo>
-        <uim:ClientInfo x:Name="__ReferenceID30" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
+        <uim:ClientInfo x:Name="__ReferenceID17" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
       </uaia:Scope.ClientInfo>
       <uaia:Scope.DesignConnectionRequest>
-        <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID30}" TelemetryClient="{x:Null}" AuthType="ElementInstance" ConnectionId="1b7681ff-2fed-ec11-b656-0003ffe77e42" ConnectionName="BD23263862AAB1A70A495EB8@techacct.adobe.com">
+        <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID17}" TelemetryClient="{x:Null}" AuthType="ElementInstance" ConnectionId="1b7681ff-2fed-ec11-b656-0003ffe77e42" ConnectionName="BD23263862AAB1A70A495EB8@techacct.adobe.com">
           <uim:ConnectionParams.TelemetryInfo>
             <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
           </uim:ConnectionParams.TelemetryInfo>
@@ -504,78 +481,176 @@
         <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
       </uaia:Scope.TelemetryProperties>
     </uaia:Scope>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="AbobeSignCredential" DisplayName="Get Credential" FolderPath="Adobe" sap:VirtualizedContainerService.HintSize="434,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[clientSecret]" Username="[clientId]" />
-    <uaaa:AdobeSignScopeActivity Connection="{x:Null}" DesignConnectionRequest="{x:Null}" ExistingConnection="{x:Null}" SelectedDesignAuthType="{x:Null}" DesignConnectionEnabled="False" DisplayName="Adobe Sign Application Scope" Environment="Development" ExistingConnectionType="uaam:AdobeSignConnection" sap:VirtualizedContainerService.HintSize="434,355" sap2010:WorkflowViewState.IdRef="AdobeSignScopeActivity_1" RefreshCacheEnabled="False" SelectedAuthType="OAuth Authorization Code" TelemetryEnabled="False" ThrowExceptionOnError="False">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="AbobeSignCredential" DisplayName="Get Credential" FolderPath="Adobe" sap:VirtualizedContainerService.HintSize="507.5,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[clientSecret]" Username="[clientId]" />
+    <uaaa:AdobeSignScopeActivity Connection="{x:Null}" DesignConnectionRequest="{x:Null}" ExistingConnection="{x:Null}" SelectedDesignAuthType="{x:Null}" DesignConnectionEnabled="False" DisplayName="Adobe Sign Application Scope" Environment="Development" ExistingConnectionType="uaam:AdobeSignConnection" sap:VirtualizedContainerService.HintSize="507.5,567" sap2010:WorkflowViewState.IdRef="AdobeSignScopeActivity_1" RefreshCacheEnabled="False" SelectedAuthType="OAuth Authorization Code" TelemetryEnabled="False" ThrowExceptionOnError="False">
       <uaaa:AdobeSignScopeActivity.Body>
         <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ubac:ScopeActivityContext" Name="ScopeActivityContext" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,153" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="426,365" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="transient_docu_id" />
+              <Variable x:TypeArguments="ubmr:ResponseStatus" Name="create_agreement_status" />
+              <Variable x:TypeArguments="uaaca:AgreementCreationInfoState" Name="state" />
+              <Variable x:TypeArguments="x:String" Name="aggreement_id" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uaaa:InvokeAdobeSignOperationActivity ConfiguredBusinessEntity="{x:Null}" FieldsSelectionPageProperties="{x:Null}" Section="{x:Null}" Status="{x:Null}" BusinessEntityName="GetGroupsOfUserUsingGET" Category="Users" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Invoke Adobe Sign Operation" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="InvokeAdobeSignOperationActivity_2" ScopeActivityType="uaaa:AdobeSignScopeActivity">
-              <uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
-                <ubme1:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID31}" Name="GetGroupsOfUserUsingGET">
+            <uaaa:CreateTransientDocumentActivity BusinessEntityName="{x:Null}" ScopeActivityType="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="CreateTransientDocumentActivity" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Create Transient Document" sap:VirtualizedContainerService.HintSize="384,172" sap2010:WorkflowViewState.IdRef="CreateTransientDocumentActivity_1">
+              <uaaa:CreateTransientDocumentActivity.BusinessEntity>
+                <ubme1:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID18}" Name="CreateTransientDocumentActivity">
                   <ubme1:BusinessEntity.AllFields>
-                    <scg:List x:TypeArguments="ubme1:EntityField" Capacity="4">
-                      <x:Reference>__ReferenceID32</x:Reference>
-                      <x:Reference>__ReferenceID33</x:Reference>
-                    </scg:List>
+                    <scg:List x:TypeArguments="ubme1:EntityField" Capacity="0" />
                   </ubme1:BusinessEntity.AllFields>
                   <ubme1:BusinessEntity.EntityMetadata>
-                    <ubme1:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="GetGroupsOfUserUsingGET">
+                    <ubme1:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateTransientDocumentActivity">
                       <ubme1:EntityMetadata.Metadata>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID31">
-                          <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Users.UsersOpenApiClient</x:String>
-                          <x:String x:Key="ClientRelativePath"></x:String>
-                          <x:String x:Key="Operation">GetGroupsOfUserUsingGET</x:String>
-                          <x:String x:Key="OperationCategory">UsersOpenApiClient</x:String>
-                          <x:String x:Key="OperationAnnotation">None</x:String>
-                          <x:String x:Key="OperationName">GetGroupsOfUserUsingGET</x:String>
-                          <x:String x:Key="UniqueOperationName">UsersOpenApiClient.GetGroupsOfUserUsingGET</x:String>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID18">
+                          <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.TransientDocuments.TransientDocumentsOpenApiClient</x:String>
                         </scg:Dictionary>
                       </ubme1:EntityMetadata.Metadata>
                     </ubme1:EntityMetadata>
                   </ubme1:BusinessEntity.EntityMetadata>
                   <ubme1:BusinessEntity.SelectedFields>
-                    <scg:List x:TypeArguments="ubme1:EntityField" Capacity="2">
+                    <scg:List x:TypeArguments="ubme1:EntityField" Capacity="0" />
+                  </ubme1:BusinessEntity.SelectedFields>
+                  <ubme1:BusinessEntity.TelemetryProperties>
+                    <scg:Dictionary x:TypeArguments="ubt1:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                  </ubme1:BusinessEntity.TelemetryProperties>
+                </ubme1:BusinessEntity>
+              </uaaa:CreateTransientDocumentActivity.BusinessEntity>
+              <uaaa:CreateTransientDocumentActivity.PopulatedAPIParameters>
+                <scg:Dictionary x:TypeArguments="x:String, ubme1:EntityField" />
+              </uaaa:CreateTransientDocumentActivity.PopulatedAPIParameters>
+              <uaaa:CreateTransientDocumentActivity.SelectedFields>
+                <scg:List x:TypeArguments="ubme1:EntityField" Capacity="4">
+                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The path of the file to upload." DisplayName="File to Upload" FieldName="File to Upload" FormDataType="FilePicker" InArgumentValue="Data\정보보호서약서.pdf" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String">Data\정보보호서약서.pdf</InArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
+                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The id of the newly created transient document." DisplayName="Transient Document ID" FieldName="Transient Document ID" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" OutArgumentValue="[transient_docu_id]" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <OutArgument x:TypeArguments="x:String">[transient_docu_id]</OutArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
+                </scg:List>
+              </uaaa:CreateTransientDocumentActivity.SelectedFields>
+              <uaaa:CreateTransientDocumentActivity.ServiceFactory>
+                <uaas:AdobeSignServiceFactory />
+              </uaaa:CreateTransientDocumentActivity.ServiceFactory>
+              <uaaa:CreateTransientDocumentActivity.TelemetryProperties>
+                <scg:Dictionary x:TypeArguments="ubt1:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+              </uaaa:CreateTransientDocumentActivity.TelemetryProperties>
+            </uaaa:CreateTransientDocumentActivity>
+            <uaaa:CreateAgreementActivity Category="{x:Null}" FieldsSelectionPageProperties="{x:Null}" ScopeActivityType="{x:Null}" Section="{x:Null}" BusinessEntityName="CreateAgreementActivity" ConfiguredBusinessEntity="CreateAgreementActivity" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Create Agreement" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="CreateAgreementActivity_1" Status="[create_agreement_status]">
+              <uaaa:CreateAgreementActivity.BusinessEntity>
+                <ubme1:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID19}" Name="CreateAgreementActivity">
+                  <ubme1:BusinessEntity.AllFields>
+                    <scg:List x:TypeArguments="ubme1:EntityField" Capacity="0" />
+                  </ubme1:BusinessEntity.AllFields>
+                  <ubme1:BusinessEntity.EntityMetadata>
+                    <ubme1:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateAgreementActivity">
+                      <ubme1:EntityMetadata.Metadata>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID19">
+                          <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
+                        </scg:Dictionary>
+                      </ubme1:EntityMetadata.Metadata>
+                    </ubme1:EntityMetadata>
+                  </ubme1:BusinessEntity.EntityMetadata>
+                  <ubme1:BusinessEntity.SelectedFields>
+                    <scg:List x:TypeArguments="ubme1:EntityField" Capacity="15">
+                      <x:Reference>__ReferenceID20</x:Reference>
+                      <x:Reference>__ReferenceID21</x:Reference>
+                      <x:Reference>__ReferenceID22</x:Reference>
+                      <x:Reference>__ReferenceID23</x:Reference>
+                      <x:Reference>__ReferenceID24</x:Reference>
+                      <x:Reference>__ReferenceID25</x:Reference>
+                      <x:Reference>__ReferenceID26</x:Reference>
+                      <x:Reference>__ReferenceID27</x:Reference>
+                      <x:Reference>__ReferenceID28</x:Reference>
+                      <x:Reference>__ReferenceID29</x:Reference>
+                      <x:Reference>__ReferenceID30</x:Reference>
+                      <x:Reference>__ReferenceID31</x:Reference>
                       <x:Reference>__ReferenceID32</x:Reference>
                       <x:Reference>__ReferenceID33</x:Reference>
+                      <x:Reference>__ReferenceID34</x:Reference>
                     </scg:List>
                   </ubme1:BusinessEntity.SelectedFields>
                   <ubme1:BusinessEntity.TelemetryProperties>
                     <scg:Dictionary x:TypeArguments="ubt1:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
                   </ubme1:BusinessEntity.TelemetryProperties>
                 </ubme1:BusinessEntity>
-              </uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
-              <uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
+              </uaaa:CreateAgreementActivity.BusinessEntity>
+              <uaaa:CreateAgreementActivity.PopulatedAPIParameters>
                 <scg:Dictionary x:TypeArguments="x:String, ubme1:EntityField" />
-              </uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
-              <uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
-                <scg:List x:TypeArguments="ubme1:EntityField" Capacity="2">
-                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID32" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The user identifier, as returned by the user creation API or retrieved from the API to fetch users. To get the details for the token owner, UserId can be replaced by &quot;me&quot; without quotes." DisplayName="UserId" FieldName="UserId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
-                  <ucm:CodeGenEntityField x:TypeArguments="uaacu:UserGroupsInfo" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID33" ArgumentDirection="Out" ArgumentType="uaacu:UserGroupsInfo" DataType="UserGroupsInfo" Description="The response from the server." DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+              </uaaa:CreateAgreementActivity.PopulatedAPIParameters>
+              <uaaa:CreateAgreementActivity.SelectedFields>
+                <scg:List x:TypeArguments="ubme1:EntityField" Capacity="15">
+                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID20" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Name of the agreement." DisplayName="Name" FieldName="Name" FormDataType="ExpressionTextBox" InArgumentValue="정보보호 서약서 " IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">정보보호 서약서 </InArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
+                  <ucm:CodeGenEntityField x:TypeArguments="uaaca:AgreementCreationInfoState" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID21" ArgumentDirection="In" ArgumentType="uaaca:AgreementCreationInfoState" DataType="AgreementCreationInfoState" Description="The state in which the agreement should land." DisplayName="State" FieldName="State" FormDataType="ExpressionTextBox" InArgumentValue="[AgreementCreationInfoState.IN_PROCESS]" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="uaaca:AgreementCreationInfoState">[AgreementCreationInfoState.IN_PROCESS]</InArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
+                  <ucm:CodeGenEntityField x:TypeArguments="uaaca:AgreementCreationInfoSignatureType" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID22" ArgumentDirection="In" ArgumentType="uaaca:AgreementCreationInfoSignatureType" DataType="AgreementCreationInfoSignatureType" Description="Specifies the type of signature you would like to request - written or e-signature." DisplayName="Signature Type" FieldName="Signature Type" FormDataType="ExpressionTextBox" InArgumentValue="[AgreementCreationInfoSignatureType.ESIGN]" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="uaaca:AgreementCreationInfoSignatureType">[AgreementCreationInfoSignatureType.ESIGN]</InArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
+                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID23" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="An optional message to the participants." DisplayName="Message" FieldName="Message" FormDataType="ExpressionTextBox" InArgumentValue="보안 서약 하세요 " IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">보안 서약 하세요 </InArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
+                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID24" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The external id for the agreement." DisplayName="ExternalID" FieldName="ExternalID" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                  <ucm:CodeGenEntityField x:TypeArguments="s:String[]" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID25" ArgumentDirection="In" ArgumentType="s:String[]" DataType="String[]" Description="A list of files to upload and send." DisplayName="Transient Document Files" FieldName="Transient Document Files" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                  <ucm:CodeGenEntityField x:TypeArguments="s:String[]" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID26" ArgumentDirection="In" ArgumentType="s:String[]" DataType="String[]" Description="The list of library documents to include." DisplayName="Library Document IDs" FieldName="Library Document IDs" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                  <ucm:CodeGenEntityField x:TypeArguments="s:String[]" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID27" ArgumentDirection="In" ArgumentType="s:String[]" DataType="String[]" Description="The list of transient documents to include." DisplayName="Transient Document IDs" FieldName="Transient Document IDs" FormDataType="ExpressionTextBox" InArgumentValue="[{ transient_docu_id}]" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="s:String[]">[{ transient_docu_id}]</InArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
+                  <ucm:CodeGenEntityField x:TypeArguments="s:String[]" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID28" ArgumentDirection="In" ArgumentType="s:String[]" DataType="String[]" Description="The list of URL files to include." DisplayName="URL Files" FieldName="URL Files" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                  <ucm:CodeGenEntityField x:TypeArguments="sd:DataTable" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID29" ArgumentDirection="In" ArgumentType="sd:DataTable" DataType="DataTable" Description="A Datatable of recipients and their type information." DisplayName="Recipients" FieldName="Recipients" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                  <ucm:CodeGenEntityField x:TypeArguments="s:String[]" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID30" ArgumentDirection="In" ArgumentType="s:String[]" DataType="String[]" Description="The list of people who are signers." DisplayName="Signers" FieldName="Signers" FormDataType="ExpressionTextBox" InArgumentValue="[{&quot;hyungsoo.kim@uipath.com&quot;}]" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <InArgument x:TypeArguments="s:String[]">[{"hyungsoo.kim@uipath.com"}]</InArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
+                  <ucm:CodeGenEntityField x:TypeArguments="s:String[]" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID31" ArgumentDirection="In" ArgumentType="s:String[]" DataType="String[]" Description="The list of people who are approvers." DisplayName="Approvers" FieldName="Approvers" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                  <ucm:CodeGenEntityField x:TypeArguments="s:String[]" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID32" ArgumentDirection="In" ArgumentType="s:String[]" DataType="String[]" Description="The list of people who are acceptors." DisplayName="Acceptors" FieldName="Acceptors" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                  <ucm:CodeGenEntityField x:TypeArguments="s:String[]" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID33" ArgumentDirection="In" ArgumentType="s:String[]" DataType="String[]" Description="The list of people who are to be cc'd." DisplayName="CCs" FieldName="CCs" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                  <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID34" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The id of the newly created agreement." DisplayName="Agreement ID" FieldName="Agreement ID" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" OutArgumentValue="[aggreement_id]" ShouldFilterOnChange="False">
+                    <ucm:CodeGenEntityField.ArgumentValue>
+                      <OutArgument x:TypeArguments="x:String">[aggreement_id]</OutArgument>
+                    </ucm:CodeGenEntityField.ArgumentValue>
+                  </ucm:CodeGenEntityField>
                 </scg:List>
-              </uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
-              <uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
+              </uaaa:CreateAgreementActivity.SelectedFields>
+              <uaaa:CreateAgreementActivity.ServiceFactory>
                 <uaas:AdobeSignServiceFactory />
-              </uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
-              <uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
+              </uaaa:CreateAgreementActivity.ServiceFactory>
+              <uaaa:CreateAgreementActivity.TelemetryProperties>
                 <scg:Dictionary x:TypeArguments="ubt1:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-              </uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
-            </uaaa:InvokeAdobeSignOperationActivity>
+              </uaaa:CreateAgreementActivity.TelemetryProperties>
+            </uaaa:CreateAgreementActivity>
           </Sequence>
         </ActivityAction>
       </uaaa:AdobeSignScopeActivity.Body>
       <uaaa:AdobeSignScopeActivity.ConnectionParameters>
         <scg:List x:TypeArguments="ucmc:ConnectionParam" Capacity="4">
-          <ucmc:ConnectionParam x:TypeArguments="x:String" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" Description="The base url for the connection." GenericArgumentValue="https://api.adobesign.com/api/rest/v6" Mandatory="True" Name="Base Url">
+          <ucmc:ConnectionParam x:TypeArguments="x:String" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" Description="The base url for the connection." GenericArgumentValue="https://secure.echosign.com/public/oauth" Mandatory="True" Name="Base Url">
             <ucmc:ConnectionParam.ArgumentValue>
-              <InArgument x:TypeArguments="x:String">https://api.adobesign.com/api/rest/v6</InArgument>
+              <InArgument x:TypeArguments="x:String">https://secure.echosign.com/public/oauth</InArgument>
             </ucmc:ConnectionParam.ArgumentValue>
           </ucmc:ConnectionParam>
           <ucmc:ConnectionParam x:TypeArguments="x:String" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" Description="The client identifier issued to the client." GenericArgumentValue="[clientId]" Mandatory="True" Name="Client Id">
