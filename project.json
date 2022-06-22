@@ -1,6 +1,6 @@
 {
-  "name": "AdobePDF서비스데모",
-  "description": "Adobe PDF Service 데모 ",
+  "name": "Adobe 자동화 데모",
+  "description": "Adobe eSign 및 PDF Service 데모 ",
   "main": "Main.xaml",
   "dependencies": {
     "Newtonsoft.Json": "[13.0.1]",
@@ -51,6 +51,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "7a27e10c-e182-4f5d-b6ba-00ba2f65aea2",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CompressPDF.xaml",
+      "uniqueId": "393258df-2f7c-4594-bc35-8c202f676188",
       "input": [],
       "output": []
     }
