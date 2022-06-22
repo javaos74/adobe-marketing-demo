@@ -1,0 +1,584 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CompressPDF" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="855,3837" sap2010:WorkflowViewState.IdRef="CompressPDF_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:swf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" xmlns:u="clr-namespace:UiPathTeam_StatusProgress_Activities;assembly=UiPathTeam.StatusProgress.Activities" xmlns:uaia="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Activities;assembly=UiPath.AdobePdfServices.IntegrationService.Activities" xmlns:uaic="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Client;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uim="clr-namespace:UiPath.IntegrationCore.Models;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:uis="clr-namespace:UiPath.IntegrationCore.Services;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="51">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.AdobePdfServices.IntegrationService.Activities</x:String>
+      <x:String>UiPath.BAF.Activities.ContextModel</x:String>
+      <x:String>UiPath.IntegrationCore.Models</x:String>
+      <x:String>UiPath.BAF.Models.Connection.APIConnection</x:String>
+      <x:String>UiPath.BAF.Models.Connection</x:String>
+      <x:String>UiPath.BAF.Telemetry</x:String>
+      <x:String>UiPath.BAF.Models</x:String>
+      <x:String>UiPath.BAF.ServiceInterfaces</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.BAF.Models.Entity</x:String>
+      <x:String>UiPath.BAF.Models.CrudOperation</x:String>
+      <x:String>UiPath.BAF.Models.Response</x:String>
+      <x:String>UiPath.AdobePdfServices.IntegrationService.Client</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Windows.Forms.Layout</x:String>
+      <x:String>UiPathTeam_StatusProgress_Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Windows.Forms.Automation</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.AdobePdfServices.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Adobe.AdobeSign.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.AdobePdfServices.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.Adobe.AdobeSign</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>UiPathTeam.StatusProgress.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CompressPDF" sap:VirtualizedContainerService.HintSize="865,3772" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="destinationFolder">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\charles\Desktop\압축된PDF</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uaia:Scope Connection="{x:Null}" ConnectionId="{x:Null}" ExistingConnection="{x:Null}" Connector="uipath-adobe-pdfservices" DesignConnectionEnabled="True" DisplayName="Adobe PDF Services Scope" sap:VirtualizedContainerService.HintSize="823,3680" sap2010:WorkflowViewState.IdRef="Scope_1" TelemetryEnabled="False" ThrowExceptionOnError="True" UseConnectionService="True">
+      <uaia:Scope.Body>
+        <ActivityAction x:TypeArguments="uaia:AdobePdfServicesScopeActivityContext">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="uaia:AdobePdfServicesScopeActivityContext" Name="ScopeActivityContext" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="789,3569" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="selectedFolder" />
+              <Variable x:TypeArguments="swf:Form" Name="container" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Caption="PDF 압축" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="747,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;PDF 파일이 있는 폴더를 선택해주세요 &quot;]" />
+            <ui:SelectFolder DisplayName="Browse for folder" sap:VirtualizedContainerService.HintSize="747,79" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[selectedFolder]" />
+            <u:Live_Status Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" ColorText="green" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="747,22" sap2010:WorkflowViewState.IdRef="Live_Status_1" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="PDF 압축을 시작 합니다..." Opacity="0.8" Progress="-1" Top="True">
+              <u:Live_Status.ProgressAutoClose>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </u:Live_Status.ProgressAutoClose>
+            </u:Live_Status>
+            <ui:ForEachFileX DisplayName="For Each File In Folder" Filter="*.pdf" Folder="[selectedFolder]" sap:VirtualizedContainerService.HintSize="747,3109" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+              <ui:ForEachFileX.Body>
+                <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="713,2854" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="documentId" />
+                      <Variable x:TypeArguments="uaic:CompressPdfStatus" Name="status" />
+                      <Variable x:TypeArguments="x:Boolean" Name="allreadyCompressed">
+                        <Variable.Default>
+                          <Literal x:TypeArguments="x:Boolean" />
+                        </Variable.Default>
+                      </Variable>
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="671,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[allreadyCompressed]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="671,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[string.Format(&quot;파일 크기 : {0:0,000,000,000} bytes&quot;, CurrentFile.Length)]" />
+                    <u:Live_Status Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" ColorText="green" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="671,22" sap2010:WorkflowViewState.IdRef="Live_Status_3" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="[string.Format(&quot;{0}  원본 크기: {1}KB&quot;, CurrentFile.Name, CurrentFile.SizeInKB)]" Opacity="0.8" Progress="-1" Top="True">
+                      <u:Live_Status.ProgressAutoClose>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </u:Live_Status.ProgressAutoClose>
+                    </u:Live_Status>
+                    <uaia:compressPdf BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="compressPdf" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="PDF Compress" FilePath="[CurrentFile.FullName]" sap:VirtualizedContainerService.HintSize="671,512" sap2010:WorkflowViewState.IdRef="compressPdf_1" UseConnectionService="True">
+                      <uaia:compressPdf.BusinessEntity>
+                        <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="compressPdf">
+                          <ubme:BusinessEntity.AllFields>
+                            <scg:List x:TypeArguments="ubme:EntityField" Capacity="16">
+                              <uim:OperationEntityField x:TypeArguments="uaic:ContentAnalyzerRequests4" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:ContentAnalyzerRequests4" DataType="ContentAnalyzerRequests4" Description="" DisplayName="ContentAnalyzerRequests" FieldName="contentAnalyzerRequests" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
+                              <uim:OperationEntityField x:TypeArguments="uaic:FileParameter" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:FileParameter" DataType="FileParameter" Description="" DisplayName="InputFile" FieldName="inputFile" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
+                              <uim:OperationEntityField x:TypeArguments="uaic:CreateCompressPdfResponse" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="uaic:CreateCompressPdfResponse" DataType="CreateCompressPdfResponse" Description="OK - Everything worked as expected" DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
+                              <uim:OperationEntityField x:TypeArguments="uaic:CreateCompressPdfRequestCpf_inputsDocumentInCpf_location" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="uaic:CreateCompressPdfRequestCpf_inputsDocumentInCpf_location" DataType="CreateCompressPdfRequestCpf_inputsDocumentInCpf_location" Description="The location containing the input file in the multipart/form-data request,valid enum is InputFile." DisplayName="Input File Location" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.cpf_location" FormDataType="ExpressionTextBox" InArgumentValue="[CreateCompressPdfRequestCpf_inputsDocumentInCpf_location.InputFile]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                                <uim:OperationEntityField.ArgumentValue>
+                                  <InArgument x:TypeArguments="uaic:CreateCompressPdfRequestCpf_inputsDocumentInCpf_location">[CreateCompressPdfRequestCpf_inputsDocumentInCpf_location.InputFile]</InArgument>
+                                </uim:OperationEntityField.ArgumentValue>
+                              </uim:OperationEntityField>
+                              <uim:OperationEntityField x:TypeArguments="uaic:CreateCompressPdfRequestCpf_inputsDocumentInDc_format" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="uaic:CreateCompressPdfRequestCpf_inputsDocumentInDc_format" DataType="CreateCompressPdfRequestCpf_inputsDocumentInDc_format" Description="The format of the file taken as input, valid enum is application/pdf." DisplayName="Input Document Format" FieldName="contentAnalyzerRequests.cpf_inputs.documentIn.dc_format" FormDataType="ExpressionTextBox" InArgumentValue="[CreateCompressPdfRequestCpf_inputsDocumentInDc_format.Application_pdf]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                                <uim:OperationEntityField.ArgumentValue>
+                                  <InArgument x:TypeArguments="uaic:CreateCompressPdfRequestCpf_inputsDocumentInDc_format">[CreateCompressPdfRequestCpf_inputsDocumentInDc_format.Application_pdf]</InArgument>
+                                </uim:OperationEntityField.ArgumentValue>
+                              </uim:OperationEntityField>
+                              <uim:OperationEntityField x:TypeArguments="s:Nullable(uaic:CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel)" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="s:Nullable(uaic:CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel)" DataType="CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel" Description="Specifies the level of compression to reduce the file size of the pdf, valid enums are HIGH, MEDIUM, LOW." DisplayName="Compression Level" FieldName="contentAnalyzerRequests.cpf_inputs.params.cpf_inline.compressionLevel" FormDataType="ExpressionTextBox" InArgumentValue="[CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel.MEDIUM]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False">
+                                <uim:OperationEntityField.ArgumentValue>
+                                  <InArgument x:TypeArguments="s:Nullable(uaic:CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel)">[CreateCompressPdfRequestCpf_inputsParamsCpf_inlineCompressionLevel.MEDIUM]</InArgument>
+                                </uim:OperationEntityField.ArgumentValue>
+                              </uim:OperationEntityField>
+                              <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The name of the created file." DisplayName="Created File Name" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.cpf_location" FormDataType="ExpressionTextBox" InArgumentValue="[Path.Combine( destinationFolder, CurrentFile.Name)]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                                <uim:OperationEntityField.ArgumentValue>
+                                  <InArgument x:TypeArguments="x:String">[Path.Combine( destinationFolder, CurrentFile.Name)]</InArgument>
+                                </uim:OperationEntityField.ArgumentValue>
+                              </uim:OperationEntityField>
+                              <uim:OperationEntityField x:TypeArguments="uaic:CreateCompressPdfRequestCpf_outputsDocumentOutDc_format" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="uaic:CreateCompressPdfRequestCpf_outputsDocumentOutDc_format" DataType="CreateCompressPdfRequestCpf_outputsDocumentOutDc_format" Description="The expected format of output document, valid enum is application/pdf ." DisplayName="Output Document Format" FieldName="contentAnalyzerRequests.cpf_outputs.documentOut.dc_format" FormDataType="ExpressionTextBox" InArgumentValue="[CreateCompressPdfRequestCpf_outputsDocumentOutDc_format.Application_pdf]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                                <uim:OperationEntityField.ArgumentValue>
+                                  <InArgument x:TypeArguments="uaic:CreateCompressPdfRequestCpf_outputsDocumentOutDc_format">[CreateCompressPdfRequestCpf_outputsDocumentOutDc_format.Application_pdf]</InArgument>
+                                </uim:OperationEntityField.ArgumentValue>
+                              </uim:OperationEntityField>
+                              <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID6" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The ID of the new document generated." DisplayName="Document Id" FieldName="Response.id" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" OutArgumentValue="[documentId]" ShouldFilterOnChange="False">
+                                <uim:OperationEntityField.ArgumentValue>
+                                  <OutArgument x:TypeArguments="x:String">[documentId]</OutArgument>
+                                </uim:OperationEntityField.ArgumentValue>
+                              </uim:OperationEntityField>
+                            </scg:List>
+                          </ubme:BusinessEntity.AllFields>
+                          <ubme:BusinessEntity.EntityMetadata>
+                            <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Section="{x:Null}" DisplayName="Compress Pdf" EligibleOperations="32" IsCustomEntity="False" Name="compressPdf" />
+                          </ubme:BusinessEntity.EntityMetadata>
+                          <ubme:BusinessEntity.Metadata>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                              <x:String x:Key="Object">compressPdf</x:String>
+                              <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.CompressPdfAPIClient</x:String>
+                              <x:String x:Key="Operation">CreateCompressPdf</x:String>
+                              <x:String x:Key="Path">/compressPdf</x:String>
+                            </scg:Dictionary>
+                          </ubme:BusinessEntity.Metadata>
+                          <ubme:BusinessEntity.SelectedFields>
+                            <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
+                              <x:Reference>__ReferenceID1</x:Reference>
+                              <x:Reference>__ReferenceID2</x:Reference>
+                              <x:Reference>__ReferenceID3</x:Reference>
+                              <x:Reference>__ReferenceID4</x:Reference>
+                              <x:Reference>__ReferenceID5</x:Reference>
+                              <x:Reference>__ReferenceID6</x:Reference>
+                            </scg:List>
+                          </ubme:BusinessEntity.SelectedFields>
+                          <ubme:BusinessEntity.TelemetryProperties>
+                            <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                          </ubme:BusinessEntity.TelemetryProperties>
+                        </ubme:BusinessEntity>
+                      </uaia:compressPdf.BusinessEntity>
+                      <uaia:compressPdf.ClientInfo>
+                        <uim:ClientInfo x:Name="__ReferenceID7" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
+                      </uaia:compressPdf.ClientInfo>
+                      <uaia:compressPdf.DesignConnectionRequest>
+                        <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID7}" ConnectionId="{x:Null}" ConnectionName="{x:Null}" TelemetryClient="{x:Null}" AuthType="ElementInstance">
+                          <uim:ConnectionParams.TelemetryInfo>
+                            <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
+                          </uim:ConnectionParams.TelemetryInfo>
+                        </uim:ConnectionParams>
+                      </uaia:compressPdf.DesignConnectionRequest>
+                      <uaia:compressPdf.SelectedFields>
+                        <scg:List x:TypeArguments="ubme:EntityField" Capacity="6">
+                          <x:Reference>__ReferenceID1</x:Reference>
+                          <x:Reference>__ReferenceID2</x:Reference>
+                          <x:Reference>__ReferenceID3</x:Reference>
+                          <x:Reference>__ReferenceID4</x:Reference>
+                          <x:Reference>__ReferenceID5</x:Reference>
+                          <x:Reference>__ReferenceID6</x:Reference>
+                        </scg:List>
+                      </uaia:compressPdf.SelectedFields>
+                      <uaia:compressPdf.ServiceFactory>
+                        <uis:ServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}">
+                          <uis:ServiceFactory.BusinessEntityExecuteService>
+                            <uis:BusinessEntityExecuteService />
+                          </uis:ServiceFactory.BusinessEntityExecuteService>
+                          <uis:ServiceFactory.ConnectionService>
+                            <uis:ConnectionService />
+                          </uis:ServiceFactory.ConnectionService>
+                          <uis:ServiceFactory.FileService>
+                            <uis:FileExecutionService />
+                          </uis:ServiceFactory.FileService>
+                          <uis:ServiceFactory.ListService>
+                            <uis:ListService />
+                          </uis:ServiceFactory.ListService>
+                          <uis:ServiceFactory.MetadataService>
+                            <uis:MetadataService />
+                          </uis:ServiceFactory.MetadataService>
+                          <uis:ServiceFactory.SampleDataService>
+                            <uis:SampleDataService />
+                          </uis:ServiceFactory.SampleDataService>
+                        </uis:ServiceFactory>
+                      </uaia:compressPdf.ServiceFactory>
+                      <uaia:compressPdf.TelemetryProperties>
+                        <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                      </uaia:compressPdf.TelemetryProperties>
+                    </uaia:compressPdf>
+                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not status.Cpf_status.Completed.Value]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="671,817" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                      <ui:InterruptibleDoWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,650" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,496" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                            <TryCatch.Try>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,264" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uaia:compressPdfStatus BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="compressPdfStatus" Connector="uipath-adobe-pdfservices" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Compress PDF Status" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="compressPdfStatus_1" UseConnectionService="True">
+                                  <uaia:compressPdfStatus.BusinessEntity>
+                                    <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="compressPdfStatus">
+                                      <ubme:BusinessEntity.AllFields>
+                                        <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                                          <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID9" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The Compressed PDF Document Id" DisplayName="Id" FieldName="compressPdfStatusId" FormDataType="ExpressionTextBox" InArgumentValue="[documentId]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="True" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                                            <uim:OperationEntityField.ArgumentValue>
+                                              <InArgument x:TypeArguments="x:String">[documentId]</InArgument>
+                                            </uim:OperationEntityField.ArgumentValue>
+                                          </uim:OperationEntityField>
+                                          <uim:OperationEntityField x:TypeArguments="uaic:CompressPdfStatus" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID10" ArgumentDirection="Out" ArgumentType="uaic:CompressPdfStatus" DataType="CompressPdfStatus" Description="The Status of Document Compressed." DisplayName="Compress PDF Status" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" OutArgumentValue="[status]" ShouldFilterOnChange="False">
+                                            <uim:OperationEntityField.ArgumentValue>
+                                              <OutArgument x:TypeArguments="uaic:CompressPdfStatus">[status]</OutArgument>
+                                            </uim:OperationEntityField.ArgumentValue>
+                                          </uim:OperationEntityField>
+                                        </scg:List>
+                                      </ubme:BusinessEntity.AllFields>
+                                      <ubme:BusinessEntity.EntityMetadata>
+                                        <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Metadata="{x:Reference __ReferenceID8}" Section="{x:Null}" DisplayName="Compress Pdf Status" EligibleOperations="2" IsCustomEntity="False" Name="compressPdfStatus" />
+                                      </ubme:BusinessEntity.EntityMetadata>
+                                      <ubme:BusinessEntity.Metadata>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID8">
+                                          <x:String x:Key="Object">compressPdfStatus</x:String>
+                                          <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.CompressPdfStatusAPIClient</x:String>
+                                          <x:String x:Key="Operation">GetCompressPdfStatuByCompressPdfStatusId</x:String>
+                                          <x:String x:Key="Path">/compressPdfStatus/{compressPdfStatusId}</x:String>
+                                        </scg:Dictionary>
+                                      </ubme:BusinessEntity.Metadata>
+                                      <ubme:BusinessEntity.SelectedFields>
+                                        <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                                          <x:Reference>__ReferenceID9</x:Reference>
+                                          <x:Reference>__ReferenceID10</x:Reference>
+                                        </scg:List>
+                                      </ubme:BusinessEntity.SelectedFields>
+                                      <ubme:BusinessEntity.TelemetryProperties>
+                                        <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                      </ubme:BusinessEntity.TelemetryProperties>
+                                    </ubme:BusinessEntity>
+                                  </uaia:compressPdfStatus.BusinessEntity>
+                                  <uaia:compressPdfStatus.ClientInfo>
+                                    <uim:ClientInfo x:Name="__ReferenceID11" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
+                                  </uaia:compressPdfStatus.ClientInfo>
+                                  <uaia:compressPdfStatus.DesignConnectionRequest>
+                                    <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID11}" ConnectionId="{x:Null}" ConnectionName="{x:Null}" TelemetryClient="{x:Null}" AuthType="ElementInstance">
+                                      <uim:ConnectionParams.TelemetryInfo>
+                                        <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
+                                      </uim:ConnectionParams.TelemetryInfo>
+                                    </uim:ConnectionParams>
+                                  </uaia:compressPdfStatus.DesignConnectionRequest>
+                                  <uaia:compressPdfStatus.SelectedFields>
+                                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
+                                      <x:Reference>__ReferenceID9</x:Reference>
+                                      <x:Reference>__ReferenceID10</x:Reference>
+                                    </scg:List>
+                                  </uaia:compressPdfStatus.SelectedFields>
+                                  <uaia:compressPdfStatus.ServiceFactory>
+                                    <uis:ServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}">
+                                      <uis:ServiceFactory.BusinessEntityExecuteService>
+                                        <uis:BusinessEntityExecuteService />
+                                      </uis:ServiceFactory.BusinessEntityExecuteService>
+                                      <uis:ServiceFactory.ConnectionService>
+                                        <uis:ConnectionService />
+                                      </uis:ServiceFactory.ConnectionService>
+                                      <uis:ServiceFactory.FileService>
+                                        <uis:FileExecutionService />
+                                      </uis:ServiceFactory.FileService>
+                                      <uis:ServiceFactory.ListService>
+                                        <uis:ListService />
+                                      </uis:ServiceFactory.ListService>
+                                      <uis:ServiceFactory.MetadataService>
+                                        <uis:MetadataService />
+                                      </uis:ServiceFactory.MetadataService>
+                                      <uis:ServiceFactory.SampleDataService>
+                                        <uis:SampleDataService />
+                                      </uis:ServiceFactory.SampleDataService>
+                                    </uis:ServiceFactory>
+                                  </uaia:compressPdfStatus.ServiceFactory>
+                                  <uaia:compressPdfStatus.TelemetryProperties>
+                                    <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                  </uaia:compressPdfStatus.TelemetryProperties>
+                                </uaia:compressPdfStatus>
+                              </Sequence>
+                            </TryCatch.Try>
+                            <TryCatch.Catches>
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ActivityAction x:TypeArguments="s:Exception">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                  </ActivityAction.Argument>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="304.5,214" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="262.5,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[allreadyCompressed]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:Break sap:VirtualizedContainerService.HintSize="262.5,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </Catch>
+                            </TryCatch.Catches>
+                          </TryCatch>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        </Sequence>
+                      </ui:InterruptibleDoWhile.Body>
+                    </ui:InterruptibleDoWhile>
+                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="671,956" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                      <ui:IfElseIf.ConditionBlocks>
+                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                          <ui:IfElseIfBlock BlockType="If" Condition="[allreadyCompressed]">
+                            <ui:IfElseIfBlock.Then>
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[Path.Combine( destinationFolder,  CurrentFile.Name)]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[CurrentFile.FullName]" />
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="Else">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="476,568" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="si:FileInfo" Name="finfo" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uaia:downloadCompressedPdf BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="downloadCompressedPdf" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Download Compressed PDF" FileName="[CurrentFile.Name]" FolderPath="[destinationFolder]" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="downloadCompressedPdf_1" UseConnectionService="True">
+                                  <uaia:downloadCompressedPdf.BusinessEntity>
+                                    <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="downloadCompressedPdf">
+                                      <ubme:BusinessEntity.AllFields>
+                                        <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                                          <x:Reference>__ReferenceID12</x:Reference>
+                                          <uim:OperationEntityField x:TypeArguments="uaic:FileResponse" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="Out" ArgumentType="uaic:FileResponse" DataType="FileResponse" Description="OK - Everything worked as expected" DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
+                                        </scg:List>
+                                      </ubme:BusinessEntity.AllFields>
+                                      <ubme:BusinessEntity.EntityMetadata>
+                                        <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Metadata="{x:Reference __ReferenceID13}" Section="{x:Null}" DisplayName="Download Compressed Pdf" EligibleOperations="32" IsCustomEntity="False" Name="downloadCompressedPdf" />
+                                      </ubme:BusinessEntity.EntityMetadata>
+                                      <ubme:BusinessEntity.Metadata>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID13">
+                                          <x:String x:Key="Object">downloadCompressedPdf</x:String>
+                                          <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DownloadCompressedPdfAPIClient</x:String>
+                                          <x:String x:Key="Operation">GetDownloadCompressedPdf</x:String>
+                                          <x:String x:Key="Path">/downloadCompressedPdf</x:String>
+                                        </scg:Dictionary>
+                                      </ubme:BusinessEntity.Metadata>
+                                      <ubme:BusinessEntity.SelectedFields>
+                                        <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                                          <x:Reference>__ReferenceID12</x:Reference>
+                                        </scg:List>
+                                      </ubme:BusinessEntity.SelectedFields>
+                                      <ubme:BusinessEntity.TelemetryProperties>
+                                        <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                      </ubme:BusinessEntity.TelemetryProperties>
+                                    </ubme:BusinessEntity>
+                                  </uaia:downloadCompressedPdf.BusinessEntity>
+                                  <uaia:downloadCompressedPdf.ClientInfo>
+                                    <uim:ClientInfo x:Name="__ReferenceID14" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
+                                  </uaia:downloadCompressedPdf.ClientInfo>
+                                  <uaia:downloadCompressedPdf.DesignConnectionRequest>
+                                    <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID14}" ConnectionId="{x:Null}" ConnectionName="{x:Null}" TelemetryClient="{x:Null}" AuthType="ElementInstance">
+                                      <uim:ConnectionParams.TelemetryInfo>
+                                        <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
+                                      </uim:ConnectionParams.TelemetryInfo>
+                                    </uim:ConnectionParams>
+                                  </uaia:downloadCompressedPdf.DesignConnectionRequest>
+                                  <uaia:downloadCompressedPdf.SelectedFields>
+                                    <scg:List x:TypeArguments="ubme:EntityField" Capacity="1">
+                                      <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID12" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The Compressed PDF Document Id" DisplayName="Document Id" FieldName="id" FormDataType="ExpressionTextBox" InArgumentValue="[documentId]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
+                                        <uim:OperationEntityField.ArgumentValue>
+                                          <InArgument x:TypeArguments="x:String">[documentId]</InArgument>
+                                        </uim:OperationEntityField.ArgumentValue>
+                                      </uim:OperationEntityField>
+                                    </scg:List>
+                                  </uaia:downloadCompressedPdf.SelectedFields>
+                                  <uaia:downloadCompressedPdf.ServiceFactory>
+                                    <uis:ServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}">
+                                      <uis:ServiceFactory.BusinessEntityExecuteService>
+                                        <uis:BusinessEntityExecuteService />
+                                      </uis:ServiceFactory.BusinessEntityExecuteService>
+                                      <uis:ServiceFactory.ConnectionService>
+                                        <uis:ConnectionService />
+                                      </uis:ServiceFactory.ConnectionService>
+                                      <uis:ServiceFactory.FileService>
+                                        <uis:FileExecutionService />
+                                      </uis:ServiceFactory.FileService>
+                                      <uis:ServiceFactory.ListService>
+                                        <uis:ListService />
+                                      </uis:ServiceFactory.ListService>
+                                      <uis:ServiceFactory.MetadataService>
+                                        <uis:MetadataService />
+                                      </uis:ServiceFactory.MetadataService>
+                                      <uis:ServiceFactory.SampleDataService>
+                                        <uis:SampleDataService />
+                                      </uis:ServiceFactory.SampleDataService>
+                                    </uis:ServiceFactory>
+                                  </uaia:downloadCompressedPdf.ServiceFactory>
+                                  <uaia:downloadCompressedPdf.TelemetryProperties>
+                                    <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                  </uaia:downloadCompressedPdf.TelemetryProperties>
+                                </uaia:downloadCompressedPdf>
+                                <ui:GetFileInfoX DisplayName="Get File Info" FilePath="[Path.Combine( destinationFolder, CurrentFile.Name)]" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="GetFileInfoX_1" Output="[finfo]" />
+                                <u:Live_Status Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" ColorText="green" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Live_Status_2" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="[string.Format(&quot;{0}  압축 크기: {1}KB&quot;, CurrentFile.Name, finfo.SizeInKB)]" Opacity="0.8" Progress="-1" Top="True">
+                                  <u:Live_Status.ProgressAutoClose>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </u:Live_Status.ProgressAutoClose>
+                                </u:Live_Status>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                        </sc:BindingList>
+                      </ui:IfElseIf.ConditionBlocks>
+                    </ui:IfElseIf>
+                    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="671,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachFileX.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachFileX>
+            <u:Close_Status Container="[container]" DisplayName="Close Status" sap:VirtualizedContainerService.HintSize="747,22" sap2010:WorkflowViewState.IdRef="Close_Status_1" />
+          </Sequence>
+        </ActivityAction>
+      </uaia:Scope.Body>
+      <uaia:Scope.ClientInfo>
+        <uim:ClientInfo x:Name="__ReferenceID15" ClientAssembly="UiPath.AdobePdfServices.IntegrationService" ClientNamespace="UiPath.AdobePdfServices.IntegrationService" />
+      </uaia:Scope.ClientInfo>
+      <uaia:Scope.DesignConnectionRequest>
+        <uim:ConnectionParams ClientInfo="{x:Reference __ReferenceID15}" TelemetryClient="{x:Null}" AuthType="ElementInstance" ConnectionId="1b7681ff-2fed-ec11-b656-0003ffe77e42" ConnectionName="BD23263862AAB1A70A495EB8@techacct.adobe.com">
+          <uim:ConnectionParams.TelemetryInfo>
+            <uim:TelemetryInfo RobotId="{x:Null}" RobotRequestId="{x:Null}" SelectedEntity="{x:Null}" WorkflowInstanceId="{x:Null}" ActivityPack="UiPath.AdobePdfServices.IntegrationService.Activities" ActivityPackVersion="3.0.2" Source="studio" />
+          </uim:ConnectionParams.TelemetryInfo>
+        </uim:ConnectionParams>
+      </uaia:Scope.DesignConnectionRequest>
+      <uaia:Scope.ServiceFactory>
+        <uis:ServiceFactory BusinessEntityService="{x:Null}" QueryService="{x:Null}">
+          <uis:ServiceFactory.BusinessEntityExecuteService>
+            <uis:BusinessEntityExecuteService />
+          </uis:ServiceFactory.BusinessEntityExecuteService>
+          <uis:ServiceFactory.ConnectionService>
+            <uis:ConnectionService />
+          </uis:ServiceFactory.ConnectionService>
+          <uis:ServiceFactory.FileService>
+            <uis:FileExecutionService />
+          </uis:ServiceFactory.FileService>
+          <uis:ServiceFactory.ListService>
+            <uis:ListService />
+          </uis:ServiceFactory.ListService>
+          <uis:ServiceFactory.MetadataService>
+            <uis:MetadataService />
+          </uis:ServiceFactory.MetadataService>
+          <uis:ServiceFactory.SampleDataService>
+            <uis:SampleDataService />
+          </uis:ServiceFactory.SampleDataService>
+        </uis:ServiceFactory>
+      </uaia:Scope.ServiceFactory>
+      <uaia:Scope.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </uaia:Scope.TelemetryProperties>
+    </uaia:Scope>
+  </Sequence>
+</Activity>
