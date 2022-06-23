@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="959,4527" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:swf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" xmlns:u="clr-namespace:UiPathTeam_StatusProgress_Activities;assembly=UiPathTeam.StatusProgress.Activities" xmlns:uaia="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Activities;assembly=UiPath.AdobePdfServices.IntegrationService.Activities" xmlns:uaic="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Client;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uim="clr-namespace:UiPath.IntegrationCore.Models;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:uis="clr-namespace:UiPath.IntegrationCore.Services;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="959,4487" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:swf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" xmlns:u="clr-namespace:UiPathTeam_StatusProgress_Activities;assembly=UiPathTeam.StatusProgress.Activities" xmlns:uaia="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Activities;assembly=UiPath.AdobePdfServices.IntegrationService.Activities" xmlns:uaic="clr-namespace:UiPath.AdobePdfServices.IntegrationService.Client;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uim="clr-namespace:UiPath.IntegrationCore.Models;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:uis="clr-namespace:UiPath.IntegrationCore.Services;assembly=UiPath.AdobePdfServices.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
       <x:String>System.Activities</x:String>
@@ -227,7 +227,7 @@ CurrentRow("EmployeeNum"), CurrentRow("CompanyName"))]</InArgument>
                                         </scg:List>
                                       </ui:MultipleAssign.AssignOperations>
                                     </ui:MultipleAssign>
-                                    <u:Live_Status ColorText="{x:Null}" Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Live_Status_1" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="[string.Format(&quot;{0}/{1}님의 정보보호서약서 처리 중...&quot;, CurrentRow(&quot;CompanyName&quot;), CurrentRow(&quot;이름&quot;))]" Opacity="0.8" Progress="-1" Top="True">
+                                    <u:Live_Status ColorText="{x:Null}" Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Live_Status_1" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="[string.Format(&quot;{0}/{1}님의 정보보호 서약서 생성 중 ... &quot;, CurrentRow(&quot;CompanyName&quot;), CurrentRow(&quot;이름&quot;))]" Opacity="0.8" Progress="-1" Top="True">
                                       <u:Live_Status.ProgressAutoClose>
                                         <InArgument x:TypeArguments="x:Boolean" />
                                       </u:Live_Status.ProgressAutoClose>
@@ -235,7 +235,7 @@ CurrentRow("EmployeeNum"), CurrentRow("CompanyName"))]</InArgument>
                                     <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[json_input]" JsonString="[json_body]" />
                                     <uaia:CreateDocument BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="documentGeneration" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Create Document" FilePath="[input_file]" sap:VirtualizedContainerService.HintSize="434,648" sap2010:WorkflowViewState.IdRef="CreateDocument_1" UseConnectionService="True">
                                       <uaia:CreateDocument.BusinessEntity>
-                                        <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="documentGeneration">
+                                        <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="documentGeneration">
                                           <ubme:BusinessEntity.AllFields>
                                             <scg:List x:TypeArguments="ubme:EntityField" Capacity="16">
                                               <uim:OperationEntityField x:TypeArguments="uaic:ContentAnalyzerRequests3" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" ArgumentDirection="In" ArgumentType="uaic:ContentAnalyzerRequests3" DataType="ContentAnalyzerRequests3" Description="" DisplayName="ContentAnalyzerRequests" FieldName="contentAnalyzerRequests" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="False" ShouldFilterOnChange="False" />
@@ -276,16 +276,17 @@ CurrentRow("EmployeeNum"), CurrentRow("CompanyName"))]</InArgument>
                                             </scg:List>
                                           </ubme:BusinessEntity.AllFields>
                                           <ubme:BusinessEntity.EntityMetadata>
-                                            <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Section="{x:Null}" DisplayName="Document Generation" EligibleOperations="32" IsCustomEntity="False" Name="documentGeneration" />
+                                            <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Section="{x:Null}" DisplayName="Document Generation" EligibleOperations="32" IsCustomEntity="False" Name="documentGeneration">
+                                              <ubme:EntityMetadata.Metadata>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                                                  <x:String x:Key="Object">documentGeneration</x:String>
+                                                  <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DocumentGenerationAPIClient</x:String>
+                                                  <x:String x:Key="Operation">CreateDocumentGeneration</x:String>
+                                                  <x:String x:Key="Path">/documentGeneration</x:String>
+                                                </scg:Dictionary>
+                                              </ubme:EntityMetadata.Metadata>
+                                            </ubme:EntityMetadata>
                                           </ubme:BusinessEntity.EntityMetadata>
-                                          <ubme:BusinessEntity.Metadata>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-                                              <x:String x:Key="Object">documentGeneration</x:String>
-                                              <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DocumentGenerationAPIClient</x:String>
-                                              <x:String x:Key="Operation">CreateDocumentGeneration</x:String>
-                                              <x:String x:Key="Path">/documentGeneration</x:String>
-                                            </scg:Dictionary>
-                                          </ubme:BusinessEntity.Metadata>
                                           <ubme:BusinessEntity.SelectedFields>
                                             <scg:List x:TypeArguments="ubme:EntityField" Capacity="8">
                                               <x:Reference>__ReferenceID1</x:Reference>
@@ -362,7 +363,7 @@ CurrentRow("EmployeeNum"), CurrentRow("CompanyName"))]</InArgument>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <uaia:GetDocumentGenerationStatus BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="documentGenerationStatus" Connector="uipath-adobe-pdfservices" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Document Generation Status" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="GetDocumentGenerationStatus_1" UseConnectionService="True">
                                             <uaia:GetDocumentGenerationStatus.BusinessEntity>
-                                              <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="documentGenerationStatus">
+                                              <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID10}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="documentGenerationStatus">
                                                 <ubme:BusinessEntity.AllFields>
                                                   <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
                                                     <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The Document Generation Id" DisplayName="Id" FieldName="documentGenerationStatusId" FormDataType="ExpressionTextBox" InArgumentValue="[documentId]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="True" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
@@ -378,16 +379,17 @@ CurrentRow("EmployeeNum"), CurrentRow("CompanyName"))]</InArgument>
                                                   </scg:List>
                                                 </ubme:BusinessEntity.AllFields>
                                                 <ubme:BusinessEntity.EntityMetadata>
-                                                  <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Metadata="{x:Reference __ReferenceID10}" Section="{x:Null}" DisplayName="Document Generation Status" EligibleOperations="2" IsCustomEntity="False" Name="documentGenerationStatus" />
+                                                  <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Section="{x:Null}" DisplayName="Document Generation Status" EligibleOperations="2" IsCustomEntity="False" Name="documentGenerationStatus">
+                                                    <ubme:EntityMetadata.Metadata>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
+                                                        <x:String x:Key="Object">documentGenerationStatus</x:String>
+                                                        <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DocumentGenerationStatusAPIClient</x:String>
+                                                        <x:String x:Key="Operation">GetDocumentGenerationStatuByDocumentGenerationStatusId</x:String>
+                                                        <x:String x:Key="Path">/documentGenerationStatus/{documentGenerationStatusId}</x:String>
+                                                      </scg:Dictionary>
+                                                    </ubme:EntityMetadata.Metadata>
+                                                  </ubme:EntityMetadata>
                                                 </ubme:BusinessEntity.EntityMetadata>
-                                                <ubme:BusinessEntity.Metadata>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
-                                                    <x:String x:Key="Object">documentGenerationStatus</x:String>
-                                                    <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DocumentGenerationStatusAPIClient</x:String>
-                                                    <x:String x:Key="Operation">GetDocumentGenerationStatuByDocumentGenerationStatusId</x:String>
-                                                    <x:String x:Key="Path">/documentGenerationStatus/{documentGenerationStatusId}</x:String>
-                                                  </scg:Dictionary>
-                                                </ubme:BusinessEntity.Metadata>
                                                 <ubme:BusinessEntity.SelectedFields>
                                                   <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
                                                     <x:Reference>__ReferenceID11</x:Reference>
@@ -447,7 +449,7 @@ CurrentRow("EmployeeNum"), CurrentRow("CompanyName"))]</InArgument>
                                     </ui:InterruptibleDoWhile>
                                     <uaia:DownloadGeneratedDocument BusinessEntityName="{x:Null}" ConnectionId="{x:Null}" IsAdditionalPropertiesActive="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="downloadGeneratedDocument" Connector="uipath-adobe-pdfservices" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Download Generated Document" FileName="[Path.GetFileName( output_file)]" FolderPath="[&quot;Data&quot;]" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="DownloadGeneratedDocument_1" UseConnectionService="True">
                                       <uaia:DownloadGeneratedDocument.BusinessEntity>
-                                        <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="downloadGeneratedDocument">
+                                        <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID14}" SearchableFields="{x:Null}" SearchableJoins="{x:Null}" Name="downloadGeneratedDocument">
                                           <ubme:BusinessEntity.AllFields>
                                             <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
                                               <uim:OperationEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID15" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The Document Generated Id" DisplayName="Document Id" FieldName="id" FormDataType="ExpressionTextBox" InArgumentValue="[documentId]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsSelected="False" Location="Undefined" Mandatory="True" ShouldFilterOnChange="False">
@@ -459,16 +461,17 @@ CurrentRow("EmployeeNum"), CurrentRow("CompanyName"))]</InArgument>
                                             </scg:List>
                                           </ubme:BusinessEntity.AllFields>
                                           <ubme:BusinessEntity.EntityMetadata>
-                                            <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Metadata="{x:Reference __ReferenceID14}" Section="{x:Null}" DisplayName="Download Generated Document" EligibleOperations="32" IsCustomEntity="False" Name="downloadGeneratedDocument" />
+                                            <ubme:EntityMetadata Category="{x:Null}" Description="{x:Null}" Section="{x:Null}" DisplayName="Download Generated Document" EligibleOperations="32" IsCustomEntity="False" Name="downloadGeneratedDocument">
+                                              <ubme:EntityMetadata.Metadata>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID14">
+                                                  <x:String x:Key="Object">downloadGeneratedDocument</x:String>
+                                                  <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DownloadGeneratedDocumentAPIClient</x:String>
+                                                  <x:String x:Key="Operation">GetDownloadGeneratedDocument</x:String>
+                                                  <x:String x:Key="Path">/downloadGeneratedDocument</x:String>
+                                                </scg:Dictionary>
+                                              </ubme:EntityMetadata.Metadata>
+                                            </ubme:EntityMetadata>
                                           </ubme:BusinessEntity.EntityMetadata>
-                                          <ubme:BusinessEntity.Metadata>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID14">
-                                              <x:String x:Key="Object">downloadGeneratedDocument</x:String>
-                                              <x:String x:Key="Client">UiPath.AdobePdfServices.IntegrationService.Client.DownloadGeneratedDocumentAPIClient</x:String>
-                                              <x:String x:Key="Operation">GetDownloadGeneratedDocument</x:String>
-                                              <x:String x:Key="Path">/downloadGeneratedDocument</x:String>
-                                            </scg:Dictionary>
-                                          </ubme:BusinessEntity.Metadata>
                                           <ubme:BusinessEntity.SelectedFields>
                                             <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
                                               <x:Reference>__ReferenceID15</x:Reference>

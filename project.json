@@ -3,7 +3,6 @@
   "description": "Adobe eSign 및 PDF Service 데모 ",
   "main": "Main.xaml",
   "dependencies": {
-    "CsvHelper": "[27.2.1]",
     "Newtonsoft.Json": "[13.0.1]",
     "UiPath.Adobe.AdobeSign.Activities": "[1.0.6]",
     "UiPath.AdobePdfServices.IntegrationService.Activities": "[3.0.2-preview]",
@@ -17,7 +16,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.4.1.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "1.0.3",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -76,6 +75,8 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {},
+  "publishData": {
+    "iconUrl": ".package/아이콘.png"
+  },
   "targetFramework": "Legacy"
 }

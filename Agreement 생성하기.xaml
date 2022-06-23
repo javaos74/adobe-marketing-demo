@@ -75,7 +75,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -110,6 +110,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="AdobeSign처리하기" sap:VirtualizedContainerService.HintSize="549.5,1029" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -137,26 +138,25 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <u:Live_Status ColorText="{x:Null}" Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="431.5,22" sap2010:WorkflowViewState.IdRef="Live_Status_1" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="[string.Format(&quot;{0} 대상 Transient 문서 만들기 &quot;, empName)]" Opacity="0.8" Progress="-1" Top="True">
+            <u:Live_Status ColorText="{x:Null}" Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="431.5,22" sap2010:WorkflowViewState.IdRef="Live_Status_1" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="[string.Format(&quot;{0}님 정보보호 서약서 전자 서명 요청 발송&quot;, empName)]" Opacity="0.8" Progress="-1" Top="True">
               <u:Live_Status.ProgressAutoClose>
                 <InArgument x:TypeArguments="x:Boolean" />
               </u:Live_Status.ProgressAutoClose>
             </u:Live_Status>
             <uaaa:CreateTransientDocumentActivity BusinessEntityName="{x:Null}" ScopeActivityType="{x:Null}" Status="{x:Null}" sap2010:Annotation.AnnotationText="서명을 받아야 할 문서 업로드 " ConfiguredBusinessEntity="CreateTransientDocumentActivity" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Create Transient Document" sap:VirtualizedContainerService.HintSize="431.5,203" sap2010:WorkflowViewState.IdRef="CreateTransientDocumentActivity_1">
               <uaaa:CreateTransientDocumentActivity.BusinessEntity>
-                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="CreateTransientDocumentActivity">
+                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Name="CreateTransientDocumentActivity">
                   <ubme:BusinessEntity.AllFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
                   </ubme:BusinessEntity.AllFields>
                   <ubme:BusinessEntity.EntityMetadata>
-                    <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateTransientDocumentActivity">
-                      <ubme:EntityMetadata.Metadata>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-                          <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.TransientDocuments.TransientDocumentsOpenApiClient</x:String>
-                        </scg:Dictionary>
-                      </ubme:EntityMetadata.Metadata>
-                    </ubme:EntityMetadata>
+                    <ubme:EntityMetadata Description="{x:Null}" Metadata="{x:Reference __ReferenceID0}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateTransientDocumentActivity" />
                   </ubme:BusinessEntity.EntityMetadata>
+                  <ubme:BusinessEntity.Metadata>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                      <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.TransientDocuments.TransientDocumentsOpenApiClient</x:String>
+                    </scg:Dictionary>
+                  </ubme:BusinessEntity.Metadata>
                   <ubme:BusinessEntity.SelectedFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
                   </ubme:BusinessEntity.SelectedFields>
@@ -196,19 +196,18 @@
             </uaaa:CreateTransientDocumentActivity>
             <uaaa:CreateAgreementActivity Category="{x:Null}" FieldsSelectionPageProperties="{x:Null}" ScopeActivityType="{x:Null}" Section="{x:Null}" sap2010:Annotation.AnnotationText="Agreement 생성 및 메일 전달 " BusinessEntityName="CreateAgreementActivity" ConfiguredBusinessEntity="CreateAgreementActivity" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Create Agreement" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="431.5,92" sap2010:WorkflowViewState.IdRef="CreateAgreementActivity_1" Status="[create_agreement_status]">
               <uaaa:CreateAgreementActivity.BusinessEntity>
-                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID1}" Name="CreateAgreementActivity">
+                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Name="CreateAgreementActivity">
                   <ubme:BusinessEntity.AllFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
                   </ubme:BusinessEntity.AllFields>
                   <ubme:BusinessEntity.EntityMetadata>
-                    <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateAgreementActivity">
-                      <ubme:EntityMetadata.Metadata>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID1">
-                          <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
-                        </scg:Dictionary>
-                      </ubme:EntityMetadata.Metadata>
-                    </ubme:EntityMetadata>
+                    <ubme:EntityMetadata Description="{x:Null}" Metadata="{x:Reference __ReferenceID1}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateAgreementActivity" />
                   </ubme:BusinessEntity.EntityMetadata>
+                  <ubme:BusinessEntity.Metadata>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID1">
+                      <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
+                    </scg:Dictionary>
+                  </ubme:BusinessEntity.Metadata>
                   <ubme:BusinessEntity.SelectedFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="15">
                       <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Name of the agreement." DisplayName="Name" FieldName="Name" FormDataType="ExpressionTextBox" InArgumentValue="정보보호 서약서 " IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
