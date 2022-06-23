@@ -1,0 +1,1124 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AdobeSign_Get_FormData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="959,4095" sap2010:WorkflowViewState.IdRef="AdobeSign처리하기_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:CsvHelper;assembly=CsvHelper" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:swf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" xmlns:u="clr-namespace:UiPathTeam_StatusProgress_Activities;assembly=UiPathTeam.StatusProgress.Activities" xmlns:uaaa="clr-namespace:UiPath.Adobe.AdobeSign.Activities;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:uaaca="clr-namespace:UiPath.Adobe.AdobeSign.Clients.Agreements;assembly=UiPath.Adobe.AdobeSign" xmlns:uaam="clr-namespace:UiPath.Adobe.AdobeSign.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:uaas="clr-namespace:UiPath.Adobe.AdobeSign.Services;assembly=UiPath.Adobe.AdobeSign" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.Adobe.AdobeSign" xmlns:ubmr="clr-namespace:UiPath.BAF.Models.Response;assembly=UiPath.Adobe.AdobeSign" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.Adobe.AdobeSign" xmlns:ucm="clr-namespace:UiPath.CodeGen.Model;assembly=UiPath.Adobe.AdobeSign" xmlns:ucmc="clr-namespace:UiPath.CodeGen.Models.Connection;assembly=UiPath.Adobe.AdobeSign" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.BAF.Models.Response</x:String>
+      <x:String>UiPath.Adobe.AdobeSign.Clients.Agreements</x:String>
+      <x:String>UiPath.Adobe.AdobeSign.Enuns</x:String>
+      <x:String>UiPath.BAF.Enums</x:String>
+      <x:String>UiPath.Swagger.Models</x:String>
+      <x:String>UiPath.CodeGen.Models.Connection</x:String>
+      <x:String>UiPath.Adobe.AdobeSign.Models</x:String>
+      <x:String>UiPath.BAF.Models.Connection</x:String>
+      <x:String>UiPath.BAF.Models.Connection.APIConnection</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.BAF.Telemetry</x:String>
+      <x:String>UiPath.BAF.Activities.ContextModel</x:String>
+      <x:String>UiPath.BAF.Models</x:String>
+      <x:String>UiPath.BAF.ServiceInterfaces</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.BAF.Models.Entity</x:String>
+      <x:String>UiPath.BAF.Models.CrudOperation</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.BAF.Properties</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Adobe.AdobeSign.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.CodeGen.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Windows.Forms.Layout</x:String>
+      <x:String>UiPathTeam_StatusProgress_Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Windows.Forms.Automation</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>CsvHelper</x:String>
+      <x:String>System.Globalization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Adobe.AdobeSign</AssemblyReference>
+      <AssemblyReference>UiPath.AdobePdfServices.IntegrationService</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Adobe.AdobeSign.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.AdobePdfServices.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>UiPathTeam.StatusProgress.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>CsvHelper</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="FormData는  CSV 포맷으로 응답으로 서명한 경우와 서명하지 않은 경우가 다름. &#xA;데이터 테이블로 처리하고 엑셀로 저장하는게 필요함 &#xA;&#xA;CsvHelper를 사용하는 처리하는게 나을 듯. &#xA;DataTable로 만들고 Merge 하기 " DisplayName="AdobeSign FormData 가져오기" sap:VirtualizedContainerService.HintSize="963.5,3990" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="clientId" />
+      <Variable x:TypeArguments="ss:SecureString" Name="clientSecret" />
+      <Variable x:TypeArguments="swf:Form" Name="container" />
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="isHeader" />
+      <Variable x:TypeArguments="x:String" Name="selectedFile" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="AbobeSignCredential" DisplayName="Get Credential" FolderPath="Adobe" sap:VirtualizedContainerService.HintSize="921.5,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[clientSecret]" Username="[clientId]" />
+    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Caption="정보보호 서약서" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="921.5,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;정보보호 서약서 대상자 파일을 선택하세요&quot;]" />
+    <ui:SelectFile DisplayName="Browse for file" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="921.5,139" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[selectedFile]" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="921.5,3279" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="887.5,3153" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="845.5,3061" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="Data\Template\보안서약대상자.xlsx" UseTemplate="True" WorkbookPath="[selectedFile]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="811.5,2726" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uaaa:AdobeSignScopeActivity Connection="{x:Null}" DesignConnectionRequest="{x:Null}" ExistingConnection="{x:Null}" SelectedDesignAuthType="{x:Null}" DesignConnectionEnabled="False" DisplayName="Adobe Sign Application Scope" Environment="Development" ExistingConnectionType="uaam:AdobeSignConnection" sap:VirtualizedContainerService.HintSize="769.5,2634" sap2010:WorkflowViewState.IdRef="AdobeSignScopeActivity_1" RefreshCacheEnabled="False" SelectedAuthType="OAuth Authorization Code" TelemetryEnabled="False" ThrowExceptionOnError="False">
+                      <uaaa:AdobeSignScopeActivity.Body>
+                        <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ubac:ScopeActivityContext" Name="ScopeActivityContext" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="735.5,2432" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="transient_docu_id" />
+                              <Variable x:TypeArguments="ubmr:ResponseStatus" Name="create_agreement_status" />
+                              <Variable x:TypeArguments="x:String" Name="aggreement_id" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="693.5,1976" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;대상자&quot;)]" SaveAfterEachRow="False">
+                              <ueab:ExcelForEachRowX.Body>
+                                <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                  <ActivityAction.Argument1>
+                                    <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                  </ActivityAction.Argument1>
+                                  <ActivityAction.Argument2>
+                                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                  </ActivityAction.Argument2>
+                                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="659.5,1792" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="uaaca:FileResponse" Name="resp" />
+                                      <Variable x:TypeArguments="x:String" Name="contentBody" />
+                                      <Variable x:TypeArguments="c:CsvReader" Name="csvReader" />
+                                      <Variable x:TypeArguments="x:String" Name="records" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <u:Live_Status ColorText="{x:Null}" Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="617.5,22" sap2010:WorkflowViewState.IdRef="Live_Status_1" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="[string.Format(&quot;{0}님의 폼데이터 추출... &quot;, currentRow(&quot;이름&quot;))]" Opacity="0.8" Progress="-1" Top="True">
+                                      <u:Live_Status.ProgressAutoClose>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </u:Live_Status.ProgressAutoClose>
+                                    </u:Live_Status>
+                                    <uaaa:InvokeAdobeSignOperationActivity ConfiguredBusinessEntity="{x:Null}" FieldsSelectionPageProperties="{x:Null}" Section="{x:Null}" Status="{x:Null}" sap2010:Annotation.AnnotationText="GetFormData 데이터 추출 " BusinessEntityName="GetFormDataUsingGET" Category="Agreements" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Invoke Adobe Sign Operation" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="617.5,92" sap2010:WorkflowViewState.IdRef="InvokeAdobeSignOperationActivity_2" ScopeActivityType="uaaa:AdobeSignScopeActivity">
+                                      <uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
+                                        <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="GetFormDataUsingGET">
+                                          <ubme:BusinessEntity.AllFields>
+                                            <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                                              <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements." DisplayName="AgreementId" FieldName="AgreementId" FormDataType="ExpressionTextBox" InArgumentValue="[CurrentRow.ByField(&quot;AgreementId&quot;)]" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False">
+                                                <ucm:CodeGenEntityField.ArgumentValue>
+                                                  <InArgument x:TypeArguments="x:String">[CurrentRow.ByField("AgreementId")]</InArgument>
+                                                </ucm:CodeGenEntityField.ArgumentValue>
+                                              </ucm:CodeGenEntityField>
+                                              <ucm:CodeGenEntityField x:TypeArguments="uaaca:FileResponse" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID2" ArgumentDirection="Out" ArgumentType="uaaca:FileResponse" DataType="FileResponse" Description="The response from the server." DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" OutArgumentValue="[resp]" ShouldFilterOnChange="False">
+                                                <ucm:CodeGenEntityField.ArgumentValue>
+                                                  <OutArgument x:TypeArguments="uaaca:FileResponse">[resp]</OutArgument>
+                                                </ucm:CodeGenEntityField.ArgumentValue>
+                                              </ucm:CodeGenEntityField>
+                                            </scg:List>
+                                          </ubme:BusinessEntity.AllFields>
+                                          <ubme:BusinessEntity.EntityMetadata>
+                                            <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="GetFormDataUsingGET">
+                                              <ubme:EntityMetadata.Metadata>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                                                  <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
+                                                  <x:String x:Key="ClientRelativePath"></x:String>
+                                                  <x:String x:Key="Operation">GetFormDataUsingGET</x:String>
+                                                  <x:String x:Key="OperationCategory">AgreementsOpenApiClient</x:String>
+                                                  <x:String x:Key="OperationAnnotation">None</x:String>
+                                                  <x:String x:Key="OperationName">GetFormDataUsingGET</x:String>
+                                                  <x:String x:Key="UniqueOperationName">AgreementsOpenApiClient.GetFormDataUsingGET</x:String>
+                                                </scg:Dictionary>
+                                              </ubme:EntityMetadata.Metadata>
+                                            </ubme:EntityMetadata>
+                                          </ubme:BusinessEntity.EntityMetadata>
+                                          <ubme:BusinessEntity.SelectedFields>
+                                            <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
+                                              <x:Reference>__ReferenceID1</x:Reference>
+                                              <x:Reference>__ReferenceID2</x:Reference>
+                                            </scg:List>
+                                          </ubme:BusinessEntity.SelectedFields>
+                                          <ubme:BusinessEntity.TelemetryProperties>
+                                            <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                          </ubme:BusinessEntity.TelemetryProperties>
+                                        </ubme:BusinessEntity>
+                                      </uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
+                                      <uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
+                                        <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
+                                      </uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
+                                      <uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
+                                        <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
+                                          <x:Reference>__ReferenceID1</x:Reference>
+                                          <x:Reference>__ReferenceID2</x:Reference>
+                                        </scg:List>
+                                      </uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
+                                      <uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
+                                        <uaas:AdobeSignServiceFactory />
+                                      </uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
+                                      <uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
+                                        <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                      </uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uaaa:InvokeAdobeSignOperationActivity>
+                                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="617.5,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                                      <ui:MultipleAssign.AssignOperations>
+                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[contentBody]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">[new StreamReader( resp.Stream).ReadToEnd]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="c:CsvReader">[csvReader]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="c:CsvReader">[new CsvHelper.CsvReader( new StringReader(contentBody), System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                        </scg:List>
+                                      </ui:MultipleAssign.AssignOperations>
+                                    </ui:MultipleAssign>
+                                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="617.5,1335" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                                      <ui:IfElseIf.ConditionBlocks>
+                                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                          <ui:IfElseIfBlock BlockType="If" Condition="[resp IsNot Nothing]">
+                                            <ui:IfElseIfBlock.Then>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="566.5,1139" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="s:Byte[]" Name="buffer" />
+                                                  <Variable x:TypeArguments="x:Int32" Name="contentLength" />
+                                                </Sequence.Variables>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524.5,87" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[string.Format(&quot;{0} 응답 결과: {1} &quot;, resp.StatusCode,  contentBody)]" />
+                                                <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="524.5,920" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                                                  <ui:IfElseIf.ConditionBlocks>
+                                                    <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                                      <ui:IfElseIfBlock BlockType="If" Condition="[isHeader]">
+                                                        <ui:IfElseIfBlock.Then>
+                                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,326" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" Encoding="UTF-8" FileName="FormData.csv" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[contentBody]" />
+                                                            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                                              <Assign.To>
+                                                                <OutArgument x:TypeArguments="x:Boolean">[isHeader]</OutArgument>
+                                                              </Assign.To>
+                                                              <Assign.Value>
+                                                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                              </Assign.Value>
+                                                            </Assign>
+                                                          </Sequence>
+                                                        </ui:IfElseIfBlock.Then>
+                                                      </ui:IfElseIfBlock>
+                                                      <ui:IfElseIfBlock BlockType="Else">
+                                                        <ui:IfElseIfBlock.Then>
+                                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="473.5,366" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                                            <Sequence.Variables>
+                                                              <Variable x:TypeArguments="s:String[]" Name="lines" />
+                                                            </Sequence.Variables>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.5,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                                              <ui:MultipleAssign.AssignOperations>
+                                                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                                                    <ui:AssignOperation.To>
+                                                                      <OutArgument x:TypeArguments="s:String[]">[lines]</OutArgument>
+                                                                    </ui:AssignOperation.To>
+                                                                    <ui:AssignOperation.Value>
+                                                                      <InArgument x:TypeArguments="s:String[]">[contentBody.Split( vbNewLine.ToCharArray)]</InArgument>
+                                                                    </ui:AssignOperation.Value>
+                                                                  </ui:AssignOperation>
+                                                                </scg:List>
+                                                              </ui:MultipleAssign.AssignOperations>
+                                                            </ui:MultipleAssign>
+                                                            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="FormData.csv" sap:VirtualizedContainerService.HintSize="431.5,134" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[lines(1)]" UseDefaultEncoding="True" />
+                                                          </Sequence>
+                                                        </ui:IfElseIfBlock.Then>
+                                                      </ui:IfElseIfBlock>
+                                                    </sc:BindingList>
+                                                  </ui:IfElseIf.ConditionBlocks>
+                                                </ui:IfElseIf>
+                                              </Sequence>
+                                            </ui:IfElseIfBlock.Then>
+                                          </ui:IfElseIfBlock>
+                                        </sc:BindingList>
+                                      </ui:IfElseIf.ConditionBlocks>
+                                    </ui:IfElseIf>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelForEachRowX.Body>
+                            </ueab:ExcelForEachRowX>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="693.5,262" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="376,184" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uaaa:InvokeAdobeSignOperationActivity ConfiguredBusinessEntity="{x:Null}" FieldsSelectionPageProperties="{x:Null}" Section="{x:Null}" Status="{x:Null}" sap2010:Annotation.AnnotationText="개별 Agreement status 조최 " BusinessEntityName="GetAgreementInfoUsingGET" Category="Agreements" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Invoke Adobe Sign Operation" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InvokeAdobeSignOperationActivity_3" ScopeActivityType="uaaa:AdobeSignScopeActivity">
+                                    <uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
+                                      <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID3}" Name="GetAgreementInfoUsingGET">
+                                        <ubme:BusinessEntity.AllFields>
+                                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
+                                            <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements." DisplayName="AgreementId" FieldName="AgreementId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                            <ucm:CodeGenEntityField x:TypeArguments="uaaca:FetchedAgreementInfo" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID5" ArgumentDirection="Out" ArgumentType="uaaca:FetchedAgreementInfo" DataType="FetchedAgreementInfo" Description="The response from the server." DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
+                                          </scg:List>
+                                        </ubme:BusinessEntity.AllFields>
+                                        <ubme:BusinessEntity.EntityMetadata>
+                                          <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="GetAgreementInfoUsingGET">
+                                            <ubme:EntityMetadata.Metadata>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID3">
+                                                <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
+                                                <x:String x:Key="ClientRelativePath"></x:String>
+                                                <x:String x:Key="Operation">GetAgreementInfoUsingGET</x:String>
+                                                <x:String x:Key="OperationCategory">AgreementsOpenApiClient</x:String>
+                                                <x:String x:Key="OperationAnnotation">None</x:String>
+                                                <x:String x:Key="OperationName">GetAgreementInfoUsingGET</x:String>
+                                                <x:String x:Key="UniqueOperationName">AgreementsOpenApiClient.GetAgreementInfoUsingGET</x:String>
+                                              </scg:Dictionary>
+                                            </ubme:EntityMetadata.Metadata>
+                                          </ubme:EntityMetadata>
+                                        </ubme:BusinessEntity.EntityMetadata>
+                                        <ubme:BusinessEntity.SelectedFields>
+                                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
+                                            <x:Reference>__ReferenceID4</x:Reference>
+                                            <x:Reference>__ReferenceID5</x:Reference>
+                                          </scg:List>
+                                        </ubme:BusinessEntity.SelectedFields>
+                                        <ubme:BusinessEntity.TelemetryProperties>
+                                          <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                        </ubme:BusinessEntity.TelemetryProperties>
+                                      </ubme:BusinessEntity>
+                                    </uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
+                                    <uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
+                                      <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
+                                    </uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
+                                    <uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
+                                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
+                                        <x:Reference>__ReferenceID4</x:Reference>
+                                        <x:Reference>__ReferenceID5</x:Reference>
+                                      </scg:List>
+                                    </uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
+                                    <uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
+                                      <uaas:AdobeSignServiceFactory />
+                                    </uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
+                                    <uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
+                                      <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                    </uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uaaa:InvokeAdobeSignOperationActivity>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <u:Close_Status Container="[container]" DisplayName="Close Status" sap:VirtualizedContainerService.HintSize="693.5,22" sap2010:WorkflowViewState.IdRef="Close_Status_1" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uaaa:AdobeSignScopeActivity.Body>
+                      <uaaa:AdobeSignScopeActivity.ConnectionParameters>
+                        <scg:List x:TypeArguments="ucmc:ConnectionParam" Capacity="4">
+                          <ucmc:ConnectionParam x:TypeArguments="x:String" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" Description="The base url for the connection." GenericArgumentValue="https://api.na4.adobesign.com" Mandatory="True" Name="Base Url">
+                            <ucmc:ConnectionParam.ArgumentValue>
+                              <InArgument x:TypeArguments="x:String">https://api.na4.adobesign.com</InArgument>
+                            </ucmc:ConnectionParam.ArgumentValue>
+                          </ucmc:ConnectionParam>
+                          <ucmc:ConnectionParam x:TypeArguments="x:String" Value="{x:Null}" ArgumentDirection="In" ArgumentType="x:String" Description="The client identifier issued to the client." GenericArgumentValue="[clientId]" Mandatory="True" Name="Client Id">
+                            <ucmc:ConnectionParam.ArgumentValue>
+                              <InArgument x:TypeArguments="x:String">[clientId]</InArgument>
+                            </ucmc:ConnectionParam.ArgumentValue>
+                          </ucmc:ConnectionParam>
+                          <ucmc:ConnectionParam x:TypeArguments="ss:SecureString" Value="{x:Null}" ArgumentDirection="In" ArgumentType="ss:SecureString" Description="The client secret issued to the client." GenericArgumentValue="[clientSecret]" Mandatory="True" Name="Client Secret">
+                            <ucmc:ConnectionParam.ArgumentValue>
+                              <InArgument x:TypeArguments="ss:SecureString">[clientSecret]</InArgument>
+                            </ucmc:ConnectionParam.ArgumentValue>
+                          </ucmc:ConnectionParam>
+                        </scg:List>
+                      </uaaa:AdobeSignScopeActivity.ConnectionParameters>
+                      <uaaa:AdobeSignScopeActivity.DesignConnectionParameters>
+                        <scg:List x:TypeArguments="ucmc:ConnectionParam" Capacity="0" />
+                      </uaaa:AdobeSignScopeActivity.DesignConnectionParameters>
+                      <uaaa:AdobeSignScopeActivity.ServiceFactory>
+                        <uaas:AdobeSignServiceFactory />
+                      </uaaa:AdobeSignScopeActivity.ServiceFactory>
+                      <uaaa:AdobeSignScopeActivity.SupportedAuthTypes>
+                        <scg:List x:TypeArguments="x:String" Capacity="4">
+                          <x:String>Existing Connection</x:String>
+                          <x:String xml:space="preserve">OAuth Passthrough </x:String>
+                          <x:String>OAuth Authorization Code</x:String>
+                        </scg:List>
+                      </uaaa:AdobeSignScopeActivity.SupportedAuthTypes>
+                      <uaaa:AdobeSignScopeActivity.SwaggerClient>
+                        <usm:SwaggerClient ClientAssembly="UiPath.Adobe.AdobeSign" ClientNamespace="UiPath.Adobe.AdobeSign">
+                          <usm:SwaggerClient.SwaggerMetadata>
+                            <usm:SwaggerMetadata OperationProperties="{x:Null}" TestConnectionClient="{x:Null}" TestConnectionMethod="{x:Null}" BaseUrl="">
+                              <usm:SwaggerMetadata.RequiredFields>
+                                <scg:Dictionary x:TypeArguments="x:String, scg:List(x:String)">
+                                  <scg:List x:TypeArguments="x:String" x:Key="accounts: getaccountusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>accountid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getagreementsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: createagreementusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getagreementinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateagreementusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>agreementinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getaudittrailusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getcombineddocumentusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getcombineddocumentpagesinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getcombineddocumenturlusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: deletedocumentsusingdelete" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getalldocumentsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getalldocumentsimageurlsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getdocumentusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>documentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getdocumentimageurlsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>documentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: geteventsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getformdatausingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getformfieldsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: addtemplatefieldstoagreementusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>formfieldpostinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateformfieldsusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>formfieldputinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getmergeinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateagreementmergeinfousingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>formfieldmergeinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getagreementinfoforuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getagreementnoteforapiuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateagreementnoteforapiuserusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>note</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateagreementvisibilityusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>visibilityinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getallmembersusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getparticipantsetusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateparticipantsetusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                    <x:String>detailedparticipantsetinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: createdelegatedparticipantsetsusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                    <x:String>delegatedparticipantsetinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: rejectagreementforparticipationusingput" Capacity="8">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                    <x:String>participantid</x:String>
+                                    <x:String>agreementrejectioninfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getagreementsecurityoptionsforparticipationusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                    <x:String>participantid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateagreementsecurityoptionsforparticipationusingput" Capacity="8">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                    <x:String>participantid</x:String>
+                                    <x:String>participantsecurityoption</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: createshareonagreementusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>sharecreationinfolist</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getagreementremindersusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: createreminderonparticipantusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>reminderinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getagreementreminderusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>reminderid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateagreementreminderusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>reminderid</x:String>
+                                    <x:String>reminderinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: createsigneridentityreportusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: getsigningurlusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateagreementstateusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>agreementstateinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: updateagreementvaultedusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>vaulteventinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="agreements: createagreementviewusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>agreementid</x:String>
+                                    <x:String>agreementviewinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="baseuris: getbaseurisusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="groups: getgroupsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="groups: creategroupusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>detailedgroupinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="groups: deletegroupusingdelete" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>groupid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="groups: getgroupdetailsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>groupid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="groups: modifygroupusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>groupid</x:String>
+                                    <x:String>detailedgroupinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="groups: getusersingroupusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>groupid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getlibrarydocumentsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: createlibrarydocumentusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getlibrarydocumentinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: updatelibrarydocumentusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                    <x:String>librarydocumentinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getlibrarydocumentaudittrailusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getcombineddocumentusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getlibrarycombineddocumenturlusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getdocumentsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getlibrarydocumentusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                    <x:String>documentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getlibrarydocumentimageurlsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                    <x:String>documentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: geteventsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getformdatausingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getlibrarydocumentinfoforuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getlibrarydocumentnoteforapiuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: updatelibrarydocumentnoteforapiuserusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                    <x:String>note</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: updatelibrarydocumentvisibilityusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                    <x:String>visibilityinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: getalllibrarydocumentmembersusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: updatelibrarydocumentstateusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                    <x:String>librarydocumentstateinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="librarydocuments: createlibrarydocumentviewusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>librarydocumentid</x:String>
+                                    <x:String>libraryviewinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: createmegasignusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasigninfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasigninfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: updatemegasignusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>megasigninfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignchildagreementsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getchildagreementsinfofileusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>childagreementsinfofileid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasigncombineddocumentusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasigncombineddocumenturlusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignalldocumentsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignalldocumentsimageurlsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasigndocumentinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>documentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: geteventsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignformdatausingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasigninfoforuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignnoteforuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: updatemegasignnoteforuserusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>note</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: updatemegasignvisibilityusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>visibilityinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getallmegasignmembersusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: createshareonmegasignusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>sharecreationinfolist</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignremindersusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: createreminderonmegasignusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>reminderinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignreminderusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>reminderid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: updatemegasignreminderusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>reminderid</x:String>
+                                    <x:String>reminderinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: updatemegasignstateusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>megasignstateinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="megasigns: getmegasignviewusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>megasignid</x:String>
+                                    <x:String>megasignviewinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="messagetemplates: getmessagetemplatesusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>locale</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="transientdocuments: createtransientdocumentusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>file</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="users: getusersusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="users: getuserdetailusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>userid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="users: modifyuserusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>userid</x:String>
+                                    <x:String>detaileduserinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="users: getgroupsofuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>userid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="users: updategroupsofuserusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>userid</x:String>
+                                    <x:String>usergroupsinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="users: modifyuserstateusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>userid</x:String>
+                                    <x:String>userstateinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="users: getuserviewsusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>userid</x:String>
+                                    <x:String>userviewinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="webhooks: getwebhooksusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="webhooks: createwebhookusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>webhookinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="webhooks: deletewebhookusingdelete" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>webhookid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="webhooks: getwebhookinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>webhookid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="webhooks: updatewebhookusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>webhookid</x:String>
+                                    <x:String>webhookinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="webhooks: updatewebhookstateusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>webhookid</x:String>
+                                    <x:String>webhookstateinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: createwidgetusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: updatewidgetusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>widgetinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetagreementsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetaudittrailusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetcombineddocumentusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetcombineddocumenturlusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetdocumentsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetalldocumentsimageurlsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetdocumentinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>documentid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: geteventsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetformdatausingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetinfoforuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetnoteforapiuserusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: updatewidgetnoteforapiuserusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>note</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: updatewidgetvisibilityusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>visibilityinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getallwidgetmembersusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getparticipantsetusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetsecurityoptionsforparticipationusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                    <x:String>participantid</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: updatewidgetsecurityoptionsforparticipationusingput" Capacity="8">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>participantsetid</x:String>
+                                    <x:String>participantid</x:String>
+                                    <x:String>participantsecurityoption</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: createshareonwidgetusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>sharecreationinfolist</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: updatewidgetstateusingput" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>widgetstateinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="widgets: getwidgetviewusingpost" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>widgetid</x:String>
+                                    <x:String>widgetviewinfo</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="workflows: getworkflowsusingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                  </scg:List>
+                                  <scg:List x:TypeArguments="x:String" x:Key="workflows: getworkflowinfousingget" Capacity="4">
+                                    <x:String>authorization</x:String>
+                                    <x:String>workflowid</x:String>
+                                  </scg:List>
+                                </scg:Dictionary>
+                              </usm:SwaggerMetadata.RequiredFields>
+                              <usm:SwaggerMetadata.SecuritySchemes>
+                                <scg:Dictionary x:TypeArguments="x:String, usm:SwaggerSecurityDefinition">
+                                  <usm:SwaggerSecurityDefinition AccessTokenKeyName="{x:Null}" ApiKeyName="{x:Null}" Description="{x:Null}" Scheme="{x:Null}" x:Key="OAuth2AuthorizationCode" AccessTokenKeyLocation="Header" ApiKeyLocation="Undefined" AuthType="OAuth2AuthorizationCode" AuthorizationUrl="https://secure{0}.adobesign.com/public/oauth/v2" Name="OAuth2AuthorizationCode" RefreshUrl="oauth/v2/refresh" TokenUrl="oauth/v2/token">
+                                    <usm:SwaggerSecurityDefinition.Scopes>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:String">
+                                        <x:String x:Key="user_read">user_read:self</x:String>
+                                        <x:String x:Key="user_write">user_write:self</x:String>
+                                        <x:String x:Key="user_login">user_login:self</x:String>
+                                        <x:String x:Key="agreement_read">agreement_read:self</x:String>
+                                        <x:String x:Key="agreement_write">agreement_write:self</x:String>
+                                        <x:String x:Key="agreement_send">agreement_send:self</x:String>
+                                        <x:String x:Key="widget_read">widget_read:self</x:String>
+                                        <x:String x:Key="widget_write">widget_write:self</x:String>
+                                        <x:String x:Key="library_read">library_read:self</x:String>
+                                        <x:String x:Key="library_write">library_write:self</x:String>
+                                        <x:String x:Key="workflow_read">workflow_read:self</x:String>
+                                        <x:String x:Key="workflow_write">workflow_write:self</x:String>
+                                        <x:String x:Key="webhook_read">webhook_read:self</x:String>
+                                        <x:String x:Key="webhook_write">webhook_write:self</x:String>
+                                        <x:String x:Key="webhook_retention">webhook_retention:self</x:String>
+                                      </scg:Dictionary>
+                                    </usm:SwaggerSecurityDefinition.Scopes>
+                                  </usm:SwaggerSecurityDefinition>
+                                </scg:Dictionary>
+                              </usm:SwaggerMetadata.SecuritySchemes>
+                            </usm:SwaggerMetadata>
+                          </usm:SwaggerClient.SwaggerMetadata>
+                        </usm:SwaggerClient>
+                      </uaaa:AdobeSignScopeActivity.SwaggerClient>
+                      <uaaa:AdobeSignScopeActivity.TelemetryProperties>
+                        <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                      </uaaa:AdobeSignScopeActivity.TelemetryProperties>
+                    </uaaa:AdobeSignScopeActivity>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>

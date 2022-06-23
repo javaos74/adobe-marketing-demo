@@ -1,18 +1,19 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AdobeSign처리하기" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:uaaa="clr-namespace:UiPath.Adobe.AdobeSign.Activities;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:uaaca="clr-namespace:UiPath.Adobe.AdobeSign.Clients.Agreements;assembly=UiPath.Adobe.AdobeSign" xmlns:uaam="clr-namespace:UiPath.Adobe.AdobeSign.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:uaas="clr-namespace:UiPath.Adobe.AdobeSign.Services;assembly=UiPath.Adobe.AdobeSign" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.Adobe.AdobeSign" xmlns:ubmr="clr-namespace:UiPath.BAF.Models.Response;assembly=UiPath.Adobe.AdobeSign" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.Adobe.AdobeSign" xmlns:ucm="clr-namespace:UiPath.CodeGen.Model;assembly=UiPath.Adobe.AdobeSign" xmlns:ucmc="clr-namespace:UiPath.CodeGen.Models.Connection;assembly=UiPath.Adobe.AdobeSign" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AdobeSign처리하기" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:swf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" xmlns:u="clr-namespace:UiPathTeam_StatusProgress_Activities;assembly=UiPathTeam.StatusProgress.Activities" xmlns:uaaa="clr-namespace:UiPath.Adobe.AdobeSign.Activities;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:uaaca="clr-namespace:UiPath.Adobe.AdobeSign.Clients.Agreements;assembly=UiPath.Adobe.AdobeSign" xmlns:uaam="clr-namespace:UiPath.Adobe.AdobeSign.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:uaas="clr-namespace:UiPath.Adobe.AdobeSign.Services;assembly=UiPath.Adobe.AdobeSign" xmlns:ubac="clr-namespace:UiPath.BAF.Activities.ContextModel;assembly=UiPath.Adobe.AdobeSign.Activities" xmlns:ubme="clr-namespace:UiPath.BAF.Models.Entity;assembly=UiPath.Adobe.AdobeSign" xmlns:ubmr="clr-namespace:UiPath.BAF.Models.Response;assembly=UiPath.Adobe.AdobeSign" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.Adobe.AdobeSign" xmlns:ucm="clr-namespace:UiPath.CodeGen.Model;assembly=UiPath.Adobe.AdobeSign" xmlns:ucmc="clr-namespace:UiPath.CodeGen.Models.Connection;assembly=UiPath.Adobe.AdobeSign" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usm="clr-namespace:UiPath.Swagger.Models;assembly=UiPath.Adobe.AdobeSign" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="clientId" Type="InArgument(x:String)" />
     <x:Property Name="clientSecret" Type="InArgument(ss:SecureString)" />
     <x:Property Name="inputPDFFile" Type="InArgument(x:String)" />
     <x:Property Name="signerEmail" Type="InArgument(x:String)" />
     <x:Property Name="out_agreement_id" Type="OutArgument(x:String)" />
+    <x:Property Name="empName" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1017,1031</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>959,1094</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AdobeSign처리하기_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="58">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -61,10 +62,20 @@
       <x:String>UiPath.BAF.Activities</x:String>
       <x:String>UiPath.Excel.Activities.Business</x:String>
       <x:String>System.Security</x:String>
-    </sco:Collection>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Windows.Forms.Layout</x:String>
+      <x:String>UiPathTeam_StatusProgress_Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Windows.Forms.Automation</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -91,46 +102,61 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>UiPathTeam.StatusProgress.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AdobeSign처리하기" sap:VirtualizedContainerService.HintSize="549.5,966" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AdobeSign처리하기" sap:VirtualizedContainerService.HintSize="549.5,1029" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uaaa:AdobeSignScopeActivity Connection="{x:Null}" DesignConnectionRequest="{x:Null}" ExistingConnection="{x:Null}" SelectedDesignAuthType="{x:Null}" DesignConnectionEnabled="False" DisplayName="Adobe Sign Application Scope" Environment="Development" ExistingConnectionType="uaam:AdobeSignConnection" sap:VirtualizedContainerService.HintSize="507.5,874" sap2010:WorkflowViewState.IdRef="AdobeSignScopeActivity_1" RefreshCacheEnabled="False" SelectedAuthType="OAuth Authorization Code" TelemetryEnabled="False" ThrowExceptionOnError="False">
+    <uaaa:AdobeSignScopeActivity Connection="{x:Null}" DesignConnectionRequest="{x:Null}" ExistingConnection="{x:Null}" SelectedDesignAuthType="{x:Null}" DesignConnectionEnabled="False" DisplayName="Adobe Sign Application Scope" Environment="Development" ExistingConnectionType="uaam:AdobeSignConnection" sap:VirtualizedContainerService.HintSize="507.5,937" sap2010:WorkflowViewState.IdRef="AdobeSignScopeActivity_1" RefreshCacheEnabled="False" SelectedAuthType="OAuth Authorization Code" TelemetryEnabled="False" ThrowExceptionOnError="False">
       <uaaa:AdobeSignScopeActivity.Body>
         <ActivityAction x:TypeArguments="ubac:ScopeActivityContext">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ubac:ScopeActivityContext" Name="ScopeActivityContext" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473.5,672" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473.5,735" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="transient_docu_id" />
               <Variable x:TypeArguments="ubmr:ResponseStatus" Name="create_agreement_status" />
               <Variable x:TypeArguments="uaaca:AgreementCreationInfoState" Name="state" />
               <Variable x:TypeArguments="x:String" Name="aggreement_id" />
+              <Variable x:TypeArguments="swf:Form" Name="container" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uaaa:CreateTransientDocumentActivity BusinessEntityName="{x:Null}" ScopeActivityType="{x:Null}" Status="{x:Null}" ConfiguredBusinessEntity="CreateTransientDocumentActivity" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Create Transient Document" sap:VirtualizedContainerService.HintSize="431.5,172" sap2010:WorkflowViewState.IdRef="CreateTransientDocumentActivity_1">
+            <u:Live_Status ColorText="{x:Null}" Mobile="{x:Null}" ColorBackground="black" ColorBorder="black" Container="[container]" DisplayName="Live Status" sap:VirtualizedContainerService.HintSize="431.5,22" sap2010:WorkflowViewState.IdRef="Live_Status_1" Location="[{&quot;center&quot;,&quot;center&quot;}]" Message="[string.Format(&quot;{0} 대상 Transient 문서 만들기 &quot;, empName)]" Opacity="0.8" Progress="-1" Top="True">
+              <u:Live_Status.ProgressAutoClose>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </u:Live_Status.ProgressAutoClose>
+            </u:Live_Status>
+            <uaaa:CreateTransientDocumentActivity BusinessEntityName="{x:Null}" ScopeActivityType="{x:Null}" Status="{x:Null}" sap2010:Annotation.AnnotationText="서명을 받아야 할 문서 업로드 " ConfiguredBusinessEntity="CreateTransientDocumentActivity" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Create Transient Document" sap:VirtualizedContainerService.HintSize="431.5,203" sap2010:WorkflowViewState.IdRef="CreateTransientDocumentActivity_1">
               <uaaa:CreateTransientDocumentActivity.BusinessEntity>
-                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Name="CreateTransientDocumentActivity">
+                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="CreateTransientDocumentActivity">
                   <ubme:BusinessEntity.AllFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
                   </ubme:BusinessEntity.AllFields>
                   <ubme:BusinessEntity.EntityMetadata>
-                    <ubme:EntityMetadata Description="{x:Null}" Metadata="{x:Reference __ReferenceID0}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateTransientDocumentActivity" />
+                    <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateTransientDocumentActivity">
+                      <ubme:EntityMetadata.Metadata>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                          <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.TransientDocuments.TransientDocumentsOpenApiClient</x:String>
+                        </scg:Dictionary>
+                      </ubme:EntityMetadata.Metadata>
+                    </ubme:EntityMetadata>
                   </ubme:BusinessEntity.EntityMetadata>
-                  <ubme:BusinessEntity.Metadata>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-                      <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.TransientDocuments.TransientDocumentsOpenApiClient</x:String>
-                    </scg:Dictionary>
-                  </ubme:BusinessEntity.Metadata>
                   <ubme:BusinessEntity.SelectedFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
                   </ubme:BusinessEntity.SelectedFields>
@@ -162,21 +188,27 @@
               <uaaa:CreateTransientDocumentActivity.TelemetryProperties>
                 <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
               </uaaa:CreateTransientDocumentActivity.TelemetryProperties>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uaaa:CreateTransientDocumentActivity>
             <uaaa:CreateAgreementActivity Category="{x:Null}" FieldsSelectionPageProperties="{x:Null}" ScopeActivityType="{x:Null}" Section="{x:Null}" sap2010:Annotation.AnnotationText="Agreement 생성 및 메일 전달 " BusinessEntityName="CreateAgreementActivity" ConfiguredBusinessEntity="CreateAgreementActivity" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Create Agreement" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="431.5,92" sap2010:WorkflowViewState.IdRef="CreateAgreementActivity_1" Status="[create_agreement_status]">
               <uaaa:CreateAgreementActivity.BusinessEntity>
-                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Name="CreateAgreementActivity">
+                <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Metadata="{x:Reference __ReferenceID1}" Name="CreateAgreementActivity">
                   <ubme:BusinessEntity.AllFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="0" />
                   </ubme:BusinessEntity.AllFields>
                   <ubme:BusinessEntity.EntityMetadata>
-                    <ubme:EntityMetadata Description="{x:Null}" Metadata="{x:Reference __ReferenceID1}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateAgreementActivity" />
+                    <ubme:EntityMetadata Description="{x:Null}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateAgreementActivity">
+                      <ubme:EntityMetadata.Metadata>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID1">
+                          <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
+                        </scg:Dictionary>
+                      </ubme:EntityMetadata.Metadata>
+                    </ubme:EntityMetadata>
                   </ubme:BusinessEntity.EntityMetadata>
-                  <ubme:BusinessEntity.Metadata>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID1">
-                      <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
-                    </scg:Dictionary>
-                  </ubme:BusinessEntity.Metadata>
                   <ubme:BusinessEntity.SelectedFields>
                     <scg:List x:TypeArguments="ubme:EntityField" Capacity="15">
                       <ucm:CodeGenEntityField x:TypeArguments="x:String" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Name of the agreement." DisplayName="Name" FieldName="Name" FormDataType="ExpressionTextBox" InArgumentValue="정보보호 서약서 " IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="True" ShouldFilterOnChange="False">
@@ -263,192 +295,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uaaa:CreateAgreementActivity>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="431.5,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="376,448" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uaaa:InvokeAdobeSignOperationActivity ConfiguredBusinessEntity="{x:Null}" FieldsSelectionPageProperties="{x:Null}" Section="{x:Null}" Status="{x:Null}" sap2010:Annotation.AnnotationText="Reminder " BusinessEntityName="CreateReminderOnParticipantUsingPOST" Category="Agreements" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Invoke Adobe Sign Operation" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InvokeAdobeSignOperationActivity_1" ScopeActivityType="uaaa:AdobeSignScopeActivity">
-                    <uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
-                      <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Name="CreateReminderOnParticipantUsingPOST">
-                        <ubme:BusinessEntity.AllFields>
-                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
-                            <x:Reference>__ReferenceID17</x:Reference>
-                            <x:Reference>__ReferenceID18</x:Reference>
-                            <x:Reference>__ReferenceID19</x:Reference>
-                          </scg:List>
-                        </ubme:BusinessEntity.AllFields>
-                        <ubme:BusinessEntity.EntityMetadata>
-                          <ubme:EntityMetadata Description="{x:Null}" Metadata="{x:Reference __ReferenceID20}" EligibleOperations="-1" IsCustomEntity="False" Name="CreateReminderOnParticipantUsingPOST" />
-                        </ubme:BusinessEntity.EntityMetadata>
-                        <ubme:BusinessEntity.Metadata>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID20">
-                            <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
-                            <x:String x:Key="ClientRelativePath"></x:String>
-                            <x:String x:Key="Operation">CreateReminderOnParticipantUsingPOST</x:String>
-                            <x:String x:Key="OperationCategory">AgreementsOpenApiClient</x:String>
-                            <x:String x:Key="OperationAnnotation">None</x:String>
-                            <x:String x:Key="OperationName">CreateReminderOnParticipantUsingPOST</x:String>
-                            <x:String x:Key="UniqueOperationName">AgreementsOpenApiClient.CreateReminderOnParticipantUsingPOST</x:String>
-                          </scg:Dictionary>
-                        </ubme:BusinessEntity.Metadata>
-                        <ubme:BusinessEntity.SelectedFields>
-                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="3">
-                            <x:Reference>__ReferenceID17</x:Reference>
-                            <x:Reference>__ReferenceID18</x:Reference>
-                            <x:Reference>__ReferenceID19</x:Reference>
-                          </scg:List>
-                        </ubme:BusinessEntity.SelectedFields>
-                        <ubme:BusinessEntity.TelemetryProperties>
-                          <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                        </ubme:BusinessEntity.TelemetryProperties>
-                      </ubme:BusinessEntity>
-                    </uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
-                    <uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
-                      <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
-                    </uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
-                    <uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
-                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="3">
-                        <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID17" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements." DisplayName="AgreementId" FieldName="AgreementId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
-                        <ucm:CodeGenEntityField x:TypeArguments="uaaca:ReminderInfo" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID18" ArgumentDirection="In" ArgumentType="uaaca:ReminderInfo" DataType="ReminderInfo" Description="The information about a reminder associated with a recipient of an agreement." DisplayName="ReminderInfo" FieldName="ReminderInfo" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
-                        <ucm:CodeGenEntityField x:TypeArguments="uaaca:ReminderCreationResult" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID19" ArgumentDirection="Out" ArgumentType="uaaca:ReminderCreationResult" DataType="ReminderCreationResult" Description="The response from the server." DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
-                      </scg:List>
-                    </uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
-                    <uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
-                      <uaas:AdobeSignServiceFactory />
-                    </uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
-                    <uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
-                      <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                    </uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uaaa:InvokeAdobeSignOperationActivity>
-                  <uaaa:InvokeAdobeSignOperationActivity ConfiguredBusinessEntity="{x:Null}" FieldsSelectionPageProperties="{x:Null}" Section="{x:Null}" Status="{x:Null}" sap2010:Annotation.AnnotationText="GetFormData 데이터 추출 " BusinessEntityName="GetFormDataUsingGET" Category="Agreements" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Invoke Adobe Sign Operation" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InvokeAdobeSignOperationActivity_2" ScopeActivityType="uaaa:AdobeSignScopeActivity">
-                    <uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
-                      <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Name="GetFormDataUsingGET">
-                        <ubme:BusinessEntity.AllFields>
-                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
-                            <x:Reference>__ReferenceID21</x:Reference>
-                            <x:Reference>__ReferenceID22</x:Reference>
-                          </scg:List>
-                        </ubme:BusinessEntity.AllFields>
-                        <ubme:BusinessEntity.EntityMetadata>
-                          <ubme:EntityMetadata Description="{x:Null}" Metadata="{x:Reference __ReferenceID23}" EligibleOperations="-1" IsCustomEntity="False" Name="GetFormDataUsingGET" />
-                        </ubme:BusinessEntity.EntityMetadata>
-                        <ubme:BusinessEntity.Metadata>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID23">
-                            <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
-                            <x:String x:Key="ClientRelativePath"></x:String>
-                            <x:String x:Key="Operation">GetFormDataUsingGET</x:String>
-                            <x:String x:Key="OperationCategory">AgreementsOpenApiClient</x:String>
-                            <x:String x:Key="OperationAnnotation">None</x:String>
-                            <x:String x:Key="OperationName">GetFormDataUsingGET</x:String>
-                            <x:String x:Key="UniqueOperationName">AgreementsOpenApiClient.GetFormDataUsingGET</x:String>
-                          </scg:Dictionary>
-                        </ubme:BusinessEntity.Metadata>
-                        <ubme:BusinessEntity.SelectedFields>
-                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
-                            <x:Reference>__ReferenceID21</x:Reference>
-                            <x:Reference>__ReferenceID22</x:Reference>
-                          </scg:List>
-                        </ubme:BusinessEntity.SelectedFields>
-                        <ubme:BusinessEntity.TelemetryProperties>
-                          <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                        </ubme:BusinessEntity.TelemetryProperties>
-                      </ubme:BusinessEntity>
-                    </uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
-                    <uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
-                      <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
-                    </uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
-                    <uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
-                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
-                        <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID21" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements." DisplayName="AgreementId" FieldName="AgreementId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
-                        <ucm:CodeGenEntityField x:TypeArguments="uaaca:FileResponse" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID22" ArgumentDirection="Out" ArgumentType="uaaca:FileResponse" DataType="FileResponse" Description="The response from the server." DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
-                      </scg:List>
-                    </uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
-                    <uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
-                      <uaas:AdobeSignServiceFactory />
-                    </uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
-                    <uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
-                      <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                    </uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uaaa:InvokeAdobeSignOperationActivity>
-                  <uaaa:InvokeAdobeSignOperationActivity ConfiguredBusinessEntity="{x:Null}" FieldsSelectionPageProperties="{x:Null}" Section="{x:Null}" Status="{x:Null}" sap2010:Annotation.AnnotationText="개별 Agreement status 조최 " BusinessEntityName="GetAgreementInfoUsingGET" Category="Agreements" CrudOperation="Function" DesignConnectionEnabled="False" DisplayName="Invoke Adobe Sign Operation" HideCascadingDropdown="False" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InvokeAdobeSignOperationActivity_3" ScopeActivityType="uaaa:AdobeSignScopeActivity">
-                    <uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
-                      <ubme:BusinessEntity AuthFields="{x:Null}" Connection="{x:Null}" Id="{x:Null}" Name="GetAgreementInfoUsingGET">
-                        <ubme:BusinessEntity.AllFields>
-                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="4">
-                            <x:Reference>__ReferenceID24</x:Reference>
-                            <x:Reference>__ReferenceID25</x:Reference>
-                          </scg:List>
-                        </ubme:BusinessEntity.AllFields>
-                        <ubme:BusinessEntity.EntityMetadata>
-                          <ubme:EntityMetadata Description="{x:Null}" Metadata="{x:Reference __ReferenceID26}" EligibleOperations="-1" IsCustomEntity="False" Name="GetAgreementInfoUsingGET" />
-                        </ubme:BusinessEntity.EntityMetadata>
-                        <ubme:BusinessEntity.Metadata>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID26">
-                            <x:String x:Key="Client">UiPath.Adobe.AdobeSign.Clients.Agreements.AgreementsOpenApiClient</x:String>
-                            <x:String x:Key="ClientRelativePath"></x:String>
-                            <x:String x:Key="Operation">GetAgreementInfoUsingGET</x:String>
-                            <x:String x:Key="OperationCategory">AgreementsOpenApiClient</x:String>
-                            <x:String x:Key="OperationAnnotation">None</x:String>
-                            <x:String x:Key="OperationName">GetAgreementInfoUsingGET</x:String>
-                            <x:String x:Key="UniqueOperationName">AgreementsOpenApiClient.GetAgreementInfoUsingGET</x:String>
-                          </scg:Dictionary>
-                        </ubme:BusinessEntity.Metadata>
-                        <ubme:BusinessEntity.SelectedFields>
-                          <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
-                            <x:Reference>__ReferenceID24</x:Reference>
-                            <x:Reference>__ReferenceID25</x:Reference>
-                          </scg:List>
-                        </ubme:BusinessEntity.SelectedFields>
-                        <ubme:BusinessEntity.TelemetryProperties>
-                          <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                        </ubme:BusinessEntity.TelemetryProperties>
-                      </ubme:BusinessEntity>
-                    </uaaa:InvokeAdobeSignOperationActivity.BusinessEntity>
-                    <uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
-                      <scg:Dictionary x:TypeArguments="x:String, ubme:EntityField" />
-                    </uaaa:InvokeAdobeSignOperationActivity.PopulatedAPIParameters>
-                    <uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
-                      <scg:List x:TypeArguments="ubme:EntityField" Capacity="2">
-                        <ucm:CodeGenEntityField x:TypeArguments="x:String" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID24" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The agreement identifier, as returned by the agreement creation API or retrieved from the API to fetch agreements." DisplayName="AgreementId" FieldName="AgreementId" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
-                        <ucm:CodeGenEntityField x:TypeArguments="uaaca:FetchedAgreementInfo" ArgumentValue="{x:Null}" ContainingType="{x:Null}" DefaultValue="{x:Null}" FieldFullName="{x:Null}" InArgumentValue="{x:Null}" InOutArgumentValue="{x:Null}" Metadata="{x:Null}" OriginalArgumentType="{x:Null}" OutArgumentValue="{x:Null}" SampleValue="{x:Null}" Value="{x:Null}" x:Name="__ReferenceID25" ArgumentDirection="Out" ArgumentType="uaaca:FetchedAgreementInfo" DataType="FetchedAgreementInfo" Description="The response from the server." DisplayName="Response" FieldName="Response" FormDataType="ExpressionTextBox" IsCustomField="False" IsDefault="False" IsDeletable="True" IsIdField="False" IsSelected="False" Mandatory="False" ShouldFilterOnChange="False" />
-                      </scg:List>
-                    </uaaa:InvokeAdobeSignOperationActivity.SelectedFields>
-                    <uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
-                      <uaas:AdobeSignServiceFactory />
-                    </uaaa:InvokeAdobeSignOperationActivity.ServiceFactory>
-                    <uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
-                      <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                    </uaaa:InvokeAdobeSignOperationActivity.TelemetryProperties>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uaaa:InvokeAdobeSignOperationActivity>
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Agreement Id 결과 값 전달 &#xD;&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.5,144" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Agreement Id 결과 값 저장 &#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.5,144" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -467,6 +314,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
+            <u:Close_Status Container="[container]" DisplayName="Close Status" sap:VirtualizedContainerService.HintSize="431.5,22" sap2010:WorkflowViewState.IdRef="Close_Status_1" />
           </Sequence>
         </ActivityAction>
       </uaaa:AdobeSignScopeActivity.Body>

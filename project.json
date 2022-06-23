@@ -3,6 +3,7 @@
   "description": "Adobe eSign 및 PDF Service 데모 ",
   "main": "Main.xaml",
   "dependencies": {
+    "CsvHelper": "[27.2.1]",
     "Newtonsoft.Json": "[13.0.1]",
     "UiPath.Adobe.AdobeSign.Activities": "[1.0.6]",
     "UiPath.AdobePdfServices.IntegrationService.Activities": "[3.0.2-preview]",
@@ -16,7 +17,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.4.1.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -55,8 +56,20 @@
       "output": []
     },
     {
-      "filePath": "CompressPDF.xaml",
-      "uniqueId": "393258df-2f7c-4594-bc35-8c202f676188",
+      "filePath": "PDF 합축하기.xaml",
+      "uniqueId": "a099a5f8-a1e6-4f85-91e8-5477f6316c5f",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "FormData 가져오기.xaml",
+      "uniqueId": "6d486cdd-d7c4-4759-873a-e1754b3b5d70",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Reminder 처리하기.xaml",
+      "uniqueId": "c82a6b90-e48d-40d2-a0e9-850f06cf0367",
       "input": [],
       "output": []
     }
