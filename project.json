@@ -1,6 +1,6 @@
 {
   "name": "Adobe 자동화 데모",
-  "description": "Adobe eSign 및 PDF Service 데모 ",
+  "description": "Adobe Sign 및 PDF Service 데모 ",
   "main": "Main.xaml",
   "dependencies": {
     "Newtonsoft.Json": "[13.0.1]",
@@ -16,7 +16,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.4.1.0",
-  "projectVersion": "1.0.4",
+  "projectVersion": "1.0.5",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
