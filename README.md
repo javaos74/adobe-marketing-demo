@@ -20,4 +20,4 @@ Acrobat Sign API 선택 후  API 응용 프로그램 선택
 clientSecret은 SecureString이여 Credential을 사용하는 것이 편리 함  
 <img src=./img/adobe-sign-scope.png width=600 height=400> <br/>  
 예제에서는 Adobe Folder에 AbobeSignCredential 을 사용함  
-<img src=./img/adobe-sign-credential.png width=600 height=250> <br/>
+<img src=./img/adobe-sign-credential.png width=600 height=150> <br/>
