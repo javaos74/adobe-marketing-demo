@@ -9,7 +9,7 @@ Adobe Acrobat Sign과 PDF 서비스 구성하기
 
 ### 1. Adobe Acrobat Sign OAuth 등록하기 
 아래 그림처럼 Adobe Sign 사이트 로그인 > 계정 선택 
-![Adobe Sign](./img/adobe-sign.png){: width="1200" height="300"}
+![Adobe Sign](./img/adobe-sign.png =1200x300)
 Acrobat Sign API 선택 후  API 응용 프로그램 선택 
 ![Adobe Application](./img/adobe-sign-application.png){: width=300 height=300 }
 새로운 OAuth 응용 프로그램 성성후 리다이렉션 URL에 (https://integrations.uipath.com/authcallback/authorize/) 입력 후 필요한 항목에 대해서 활성화 선택 
