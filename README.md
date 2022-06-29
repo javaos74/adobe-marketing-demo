@@ -30,5 +30,17 @@ adobe.com 에 회원 가입 후 console 사이트로 이동
 <img src='./img/adobe-pdf-genkey.png' width=600 height=210> <br/>
 API 구성 완료하기  
 <img src='./img/adobe-pdf-config-api.png' width=600 height=226> <br/>
+Integration 서비스에 등록할 인증 정보는 아래와 같습니다.  
+<img src='./img/adobe-pdf-jwt.png' width=600 height=510> <br/> 
+
+
+### 4. UiPath Integration 서비스에 등록하기 
+UiPath Automation Cloud에서 Integration Service에서 Adobe PDF 서비스 선택 
+<img src='./img/uipath-integration.png' width=600 height=336> <br/>
+Adobe 사이트에서 확인한 값을 입력하면 됩니다. 개인키 부분에 대해서는 키 생성 관련해서 만들어 놓은 private key를 사용. 이때 header/tail 부분인 -----BEGIN PRIVATE KEY----- 와 -----END PRIVATE KEY----- 를 제거하고 입력  
+<img src='./img/uipath-integration-setup.png' width=400 height=614> <br/>
+
+
+
 
 
