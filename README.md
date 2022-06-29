@@ -23,12 +23,12 @@ clientSecret은 SecureString이여 Credential을 사용하는 것이 편리 함
 예제에서는 Adobe Folder에 AbobeSignCredential 을 사용함  
 <img src=./img/adobe-sign-credential.png width=600 height=150> <br/>
 
-### 3. Adobe 개발자 계정 등록 및 PDF Service API 구성하기 
+### 3. Adobe 개발자 계정 등록 및 PDF Service API 구성하기  
 adobe.com 에 회원 가입 후 console 사이트로 이동  
 <img src='./img/adobe-pdf-api.png' width=600 height=466> <br/> 
-사용할 키 생성하기 
+사용할 키 생성하기  
 <img src='./img/adobe-pdf-genkey.png' width=600 height=210> <br/>
-API 구성 완료하기 
+API 구성 완료하기  
 <img src='./img/adobe-pdf-config-api.png' width=600 height=226> <br/>
 
 
