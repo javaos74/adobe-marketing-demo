@@ -11,9 +11,9 @@ Adobe Acrobat Sign과 PDF 서비스 구성하기
 아래 그림처럼 Adobe Sign 사이트 로그인 > 계정 선택  
 <img src=./img/adobe-sign.png width=600 height=150 alt='Adobe Sign' align=left>  
 Acrobat Sign API 선택 후  API 응용 프로그램 선택  
-<img src=./img/adobe-sign-application.png width=300 height=300 alt='Adobe Sign Application' align=left>. 
+<img src=./img/adobe-sign-application.png width=300 height=300 alt='Adobe Sign Application' align=left> <br/>
 새로운 OAuth 응용 프로그램 성성후 리다이렉션 URL에 (https://integrations.uipath.com/authcallback/authorize/) 입력 후 필요한 항목에 대해서 활성화 선택 
-<img src=./img/adobe-sign-oauth-config.png width=500 height=600 left=left>  
+<img src=./img/adobe-sign-oauth-config.png width=600 height=500 left=left> <br/>
 
 ### 2. Adobe Sign ClientID 와 ClientSecret 사용하기 
 아래 그림과 같이 Adobe Sign Scope에서  Base URL을  https://api.na4.adobesign.com 사용하고 필요한 clientId 및 clientSecret 사용 
